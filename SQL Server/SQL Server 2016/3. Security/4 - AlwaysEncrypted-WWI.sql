@@ -52,30 +52,94 @@ CREATE TABLE Purchasing.Supplier_PrivateDetails
                            ENCRYPTION_TYPE = RANDOMIZED,
 						ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NULL
 );
+--  encrypted columns containing character strings must have one of the binary2 collations.
+-- SELECT * FROM sys.fn_helpcollations()   
+-- WHERE name LIKE '%BIN2%' AND name like 'SQL%';  
 GO
 -- =====================================================================================================
--- Step 3) Test Insert
+-- Step 3) Test CRUD operations
 -- =====================================================================================================
+-- Select no filter
+Select * FROM Purchasing.Supplier_PrivateDetails
+
+-- Select filter on encrypted column
+Select * FROM Purchasing.Supplier_PrivateDetails
+Where CreditCardNumber = '7382-5849-2903-2838'
+GO
+
+-- Can i Insert?
 INSERT Purchasing.Supplier_PrivateDetails 
 	(SupplierID, NationalID, CreditCardNumber, ExpiryDate)
 VALUES
 	(1, N'93748567', N'7382-5849-2903-2838', N'11/19');
 GO
-/*
-						cmd.CommandText = "INSERT Purchasing.Supplier_PrivateDetails "
-                                        + "(SupplierID, NationalID, CreditCardNumber, ExpiryDate) "
-                                        + "VALUES (@SupplierID, @NationalID, @CreditCardNumber, @ExpiryDate);";
-                        cmd.Parameters.Add(new SqlParameter("@SupplierID", SqlDbType.Int));
-                        cmd.Parameters.Add(new SqlParameter("@NationalID", SqlDbType.NVarChar, 30));
-                        cmd.Parameters.Add(new SqlParameter("@CreditCardNumber", SqlDbType.NVarChar, 30));
-                        cmd.Parameters.Add(new SqlParameter("@ExpiryDate", SqlDbType.NVarChar, 5));
+/* From and application, need to parametize as below:
+
+	cmd.CommandText = "INSERT Purchasing.Supplier_PrivateDetails "
+    + "(SupplierID, NationalID, CreditCardNumber, ExpiryDate) "
+    + "VALUES (@SupplierID, @NationalID, @CreditCardNumber, @ExpiryDate);";
+    cmd.Parameters.Add(new SqlParameter("@SupplierID", SqlDbType.Int));
+    cmd.Parameters.Add(new SqlParameter("@NationalID", SqlDbType.NVarChar, 30));
+    cmd.Parameters.Add(new SqlParameter("@CreditCardNumber", SqlDbType.NVarChar, 30));
+    cmd.Parameters.Add(new SqlParameter("@ExpiryDate", SqlDbType.NVarChar, 5));
 */
--- Clear the table
-TRUNCATE TABLE Purchasing.Supplier_PrivateDetails 
+
+-- Need to paramertize it and SSMS 17.0 with Parameterization for AE enabled see: https://blogs.msdn.microsoft.com/sqlsecurity/2016/12/13/parameterization-for-always-encrypted-using-ssms-to-insert-into-update-and-filter-by-encrypted-columns/
+-- Make sure running as admin, you've allowed parameterization and Column Encryption Setting= Enabled
+Declare @SupplierID int = 1,
+		@NationalID NVarChar(30) = N'93748567',
+		@CreditCardNumber NVarChar(30) = N'7382-5849-2903-2838',
+		@ExpiryDate Nvarchar(5) = N'11/19'
+
+INSERT Purchasing.Supplier_PrivateDetails 
+	(SupplierID, NationalID, CreditCardNumber, ExpiryDate)
+VALUES
+	(@SupplierID,@NationalID, @CreditCardNumber, @ExpiryDate);
+GO
+
+-- I can also query via parameterization and filtering the data
+-- NOTE: YOU MUST HAVE ACCESS TO THE CMK!
+DECLARE @CreditCardNumber nvarchar(30) = N'7382-5849-2903-2838'
+Select * FROM Purchasing.Supplier_PrivateDetails
+Where CreditCardNumber = @CreditCardNumber
+GO
+-- WAIT WHAT!!!???!!!
+
+-- Try another
+DECLARE @NationalID nvarchar(30) = N'93748567'
+Select * FROM Purchasing.Supplier_PrivateDetails
+Where NationalID = @NationalID
+GO
+
+--Update
+Declare	@CreditCardNumber NVarChar(30) = N'5555-0123-4567-8910',
+		@NationalID nvarchar(30)= '93748567'
+UPDATE Purchasing.Supplier_PrivateDetails
+SET CreditCardNumber = @CreditCardNumber
+Where NationalID = @NationalID
+
+Select *
+from  Purchasing.Supplier_PrivateDetails
+GO
+
+--DELETE
+Declare	@NationalID nvarchar(30)= N'93748567'
+DELETE Purchasing.Supplier_PrivateDetails
+Where NationalID = @NationalID
+GO
+-- Confirm:
+Select *
+from  Purchasing.Supplier_PrivateDetails
+GO
+
 
 -- =====================================================================================================
 -- Step 4) Run client application
 -- =====================================================================================================
+ALTER EVENT SESSION AlwaysEncrypted
+ON SERVER
+STATE = START
+GO
 
 --Kick off workload C:\Demos\SQL Server 2016 - WWI\Always Encrypted\PopulateAlwaysEncryptedData.exe
 
@@ -95,4 +159,10 @@ GO`
 Use WideWorldImporters
 GO
 SELECT * FROM Purchasing.Supplier_PrivateDetails ORDER BY SupplierID;
+GO
+
+-- Stop Session
+ALTER EVENT SESSION AlwaysEncrypted
+ON SERVER
+STATE = STOP
 GO

@@ -3,25 +3,13 @@
   <Items>
     <LogicalFolder Name="Connections" Type="2" Sorted="true">
       <Items>
-        <ConnectionNode Name="(local):PANKAJTSP\pankajadmin">
+        <ConnectionNode Name="(local):NORTHAMERICA\pansaty">
           <Created>2016-06-17T14:39:38.6244655-04:00</Created>
           <Type>SQL</Type>
           <Server>(local)</Server>
           <UserName />
           <Authentication>Windows Authentication</Authentication>
           <InitialDB>master</InitialDB>
-          <LoginTimeout>15</LoginTimeout>
-          <ExecutionTimeout>0</ExecutionTimeout>
-          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
-          <ApplicationName>Microsoft SQL Server Management Studio - Query</ApplicationName>
-        </ConnectionNode>
-        <ConnectionNode Name="PANKAJTSP-SQL01:PANKAJTSP\pankajadmin">
-          <Created>2016-06-22T11:03:40.0904467-04:00</Created>
-          <Type>SQL</Type>
-          <Server>PANKAJTSP-SQL01</Server>
-          <UserName />
-          <Authentication>Windows Authentication</Authentication>
-          <InitialDB />
           <LoginTimeout>15</LoginTimeout>
           <ExecutionTimeout>0</ExecutionTimeout>
           <ConnectionProtocol>NotSpecified</ConnectionProtocol>
@@ -42,12 +30,6 @@
           <AssociatedConnSrvName />
           <AssociatedConnUserName />
           <FullPath>_TDE enable via EKM.sql</FullPath>
-        </FileNode>
-        <FileNode Name="1 - AlwaysEncrypted.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:PANKAJTSP-SQL01:True</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>PANKAJTSP-SQL01</AssociatedConnSrvName>
-          <AssociatedConnUserName />
-          <FullPath>1 - AlwaysEncrypted.sql</FullPath>
         </FileNode>
         <FileNode Name="1 - TDE enable via local cert.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:(local):True</AssociatedConnectionMoniker>
@@ -73,15 +55,21 @@
           <AssociatedConnUserName />
           <FullPath>3 - TLS or SSL.sql</FullPath>
         </FileNode>
-        <FileNode Name="4 - AlwaysEncrypted.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:PANKAJTSP-SQL01:True</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>PANKAJTSP-SQL01</AssociatedConnSrvName>
+        <FileNode Name="4 - AlwaysEncrypted-WWI.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:(local):True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>(local)</AssociatedConnSrvName>
           <AssociatedConnUserName />
-          <FullPath>4 - AlwaysEncrypted.sql</FullPath>
+          <FullPath>4 - AlwaysEncrypted-WWI.sql</FullPath>
+        </FileNode>
+        <FileNode Name="4.1 - AlwaysEncrypted.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:(local):True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>(local)</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>4.1 - AlwaysEncrypted.sql</FullPath>
         </FileNode>
         <FileNode Name="5 - Dynamic Data Masking.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:PANKAJTSP-SQL01:True</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>PANKAJTSP-SQL01</AssociatedConnSrvName>
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
           <AssociatedConnUserName />
           <FullPath>5 - Dynamic Data Masking.sql</FullPath>
         </FileNode>
@@ -98,38 +86,38 @@
           <FullPath>6 - RLS (old).sql</FullPath>
         </FileNode>
         <FileNode Name="6. RLS Simple.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:PANKAJTSP-SQL01:True</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>PANKAJTSP-SQL01</AssociatedConnSrvName>
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
           <AssociatedConnUserName />
           <FullPath>6. RLS Simple.sql</FullPath>
         </FileNode>
         <FileNode Name="7 - Seperation of Duties.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:PANKAJTSP-SQL01:True</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>PANKAJTSP-SQL01</AssociatedConnSrvName>
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
           <AssociatedConnUserName />
           <FullPath>7 - Seperation of Duties.sql</FullPath>
         </FileNode>
         <FileNode Name="8.1 - ContosoClinic-Enable-RLS.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:PANKAJTSP-SQL01:True</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>PANKAJTSP-SQL01</AssociatedConnSrvName>
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
           <AssociatedConnUserName />
           <FullPath>8.1 - ContosoClinic-Enable-RLS.sql</FullPath>
         </FileNode>
         <FileNode Name="8.2 - ContosoClinic-Enable-DDM.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:PANKAJTSP-SQL01:True</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>PANKAJTSP-SQL01</AssociatedConnSrvName>
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
           <AssociatedConnUserName />
           <FullPath>8.2 - ContosoClinic-Enable-DDM.sql</FullPath>
         </FileNode>
         <FileNode Name="9.1 - Setup Audit.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:PANKAJTSP-SQL01:True</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>PANKAJTSP-SQL01</AssociatedConnSrvName>
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
           <AssociatedConnUserName />
           <FullPath>9.1 - Setup Audit.sql</FullPath>
         </FileNode>
         <FileNode Name="ETE - Locking Out the JrDBA.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:PANKAJTSP-SQL01:True</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>PANKAJTSP-SQL01</AssociatedConnSrvName>
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
           <AssociatedConnUserName />
           <FullPath>ETE - Locking Out the JrDBA.sql</FullPath>
         </FileNode>
