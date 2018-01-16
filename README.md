@@ -1,3 +1,3 @@
 # DemoContent
 
-Adding SQLDB Demo Content
+Demo content for SQL Server and Azure Data Services. 
