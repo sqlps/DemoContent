@@ -1,2 +1,0 @@
--- 1) USE GUI TO Backup to https://pankajtsp.blob.core.windows.net/sqlbackups and script out
--- 2) Validate in SSMS

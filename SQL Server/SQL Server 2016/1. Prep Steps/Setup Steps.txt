@@ -1,3 +1,0 @@
-1) Copy Files to D:
-2) Restore Databases
-3) Open Upgrade Advisor and run StretchDB Scenario

@@ -1,6 +1,0 @@
--- Stretch Adventureworks2016DWCTP3 to Azure
--- AS ADMIN Open C:\Demos\SQLServer 2016\Hybrid Cloud Capabilities\In-Memory Enhancements\Ticket Reservations and build the TicketResrvations project
--- Open C:\Software\SQLSamplesFromGitHub\samples\features\security\contoso-clinic\src\ContosoClinic.sln
--- Open SSRS Reports
--- delete backups from azure blob
--- Run C:\Demos\SQLServer 2016\Hybrid Cloud Capabilities\In-Memory Enhancements\Operational Analytics for atleast 20 mins

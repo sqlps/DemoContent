@@ -1,0 +1,1 @@
+C:\Demos\SQL Server 2016 - WWI\always-encrypted\PopulateAlwaysEncryptedData\bin\Debug\PopulateAlwaysEncryptedData.exe.config
