@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# SQL Server Management Studio Solution File, Format Version 13.00
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "Security", "Security\Security.ssmssqlproj", "{EA252FAE-2E87-4CD4-A8B3-0293620D2F4C}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "Performance", "Performance\Performance.ssmssqlproj", "{7B7C1E0F-4FBA-42E8-A65A-B754B16D15C1}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "Parking lot", "Parking lot\Parking lot.ssmssqlproj", "{8714D32D-55D3-4164-85E3-3D7B4684A74E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Default|Default = Default|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EA252FAE-2E87-4CD4-A8B3-0293620D2F4C}.Default|Default.ActiveCfg = Default
+		{077DF64D-9BDF-40D1-928C-7621214AA8D3}.Default|Default.ActiveCfg = Default
+		{7B7C1E0F-4FBA-42E8-A65A-B754B16D15C1}.Default|Default.ActiveCfg = Default
+		{8714D32D-55D3-4164-85E3-3D7B4684A74E}.Default|Default.ActiveCfg = Default
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

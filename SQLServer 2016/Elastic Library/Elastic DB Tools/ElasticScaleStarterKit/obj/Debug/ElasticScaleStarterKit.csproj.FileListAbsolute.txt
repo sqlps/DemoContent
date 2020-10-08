@@ -1,0 +1,13 @@
+C:\Demos\SQLServer 2016\Elastic Library\Elastic DB Tools\ElasticScaleStarterKit\bin\Debug\ElasticScaleStarterKit.exe.config
+C:\Demos\SQLServer 2016\Elastic Library\Elastic DB Tools\ElasticScaleStarterKit\bin\Debug\InitializeShard.sql
+C:\Demos\SQLServer 2016\Elastic Library\Elastic DB Tools\ElasticScaleStarterKit\bin\Debug\ElasticScaleStarterKit.exe
+C:\Demos\SQLServer 2016\Elastic Library\Elastic DB Tools\ElasticScaleStarterKit\bin\Debug\ElasticScaleStarterKit.pdb
+C:\Demos\SQLServer 2016\Elastic Library\Elastic DB Tools\ElasticScaleStarterKit\bin\Debug\Microsoft.Azure.SqlDatabase.ElasticScale.Client.dll
+C:\Demos\SQLServer 2016\Elastic Library\Elastic DB Tools\ElasticScaleStarterKit\bin\Debug\Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling.Data.dll
+C:\Demos\SQLServer 2016\Elastic Library\Elastic DB Tools\ElasticScaleStarterKit\bin\Debug\Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling.dll
+C:\Demos\SQLServer 2016\Elastic Library\Elastic DB Tools\ElasticScaleStarterKit\bin\Debug\Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling.xml
+C:\Demos\SQLServer 2016\Elastic Library\Elastic DB Tools\ElasticScaleStarterKit\bin\Debug\Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling.Data.xml
+C:\Demos\SQLServer 2016\Elastic Library\Elastic DB Tools\ElasticScaleStarterKit\bin\Debug\Microsoft.Azure.SqlDatabase.ElasticScale.Client.xml
+C:\Demos\SQLServer 2016\Elastic Library\Elastic DB Tools\ElasticScaleStarterKit\obj\Debug\ElasticScaleStarterKit.csprojResolveAssemblyReference.cache
+C:\Demos\SQLServer 2016\Elastic Library\Elastic DB Tools\ElasticScaleStarterKit\obj\Debug\ElasticScaleStarterKit.exe
+C:\Demos\SQLServer 2016\Elastic Library\Elastic DB Tools\ElasticScaleStarterKit\obj\Debug\ElasticScaleStarterKit.pdb

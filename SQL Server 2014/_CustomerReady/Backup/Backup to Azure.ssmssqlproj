@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<SqlWorkbenchSqlProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="Backup to Azure">
+  <Items>
+    <LogicalFolder Name="Connections" Type="2" Sorted="true">
+      <Items />
+    </LogicalFolder>
+    <LogicalFolder Name="Queries" Type="0" Sorted="true">
+      <Items>
+        <FileNode Name="1 - Setup.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>1 - Setup.sql</FullPath>
+        </FileNode>
+        <FileNode Name="2 - Simple Backup to Azure.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>2 - Simple Backup to Azure.sql</FullPath>
+        </FileNode>
+        <FileNode Name="3 - ExtendedProperties-Populate_Query_Update_delete.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>3 - ExtendedProperties-Populate_Query_Update_delete.sql</FullPath>
+        </FileNode>
+        <FileNode Name="4 - Backup Local then to Azure.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>4 - Backup Local then to Azure.sql</FullPath>
+        </FileNode>
+        <FileNode Name="5a - Setup Smart Admin.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>5a - Setup Smart Admin.sql</FullPath>
+        </FileNode>
+        <FileNode Name="5b - Instance level backups.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>5b - Instance level backups.sql</FullPath>
+        </FileNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="Miscellaneous" Type="3" Sorted="true">
+      <Items />
+    </LogicalFolder>
+  </Items>
+</SqlWorkbenchSqlProject>

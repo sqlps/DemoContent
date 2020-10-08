@@ -1,0 +1,24 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# SQL Server Management Studio Solution File, Format Version 13.00
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "Temporal and Hybrid", "Temporal and Hybrid\Temporal and Hybrid.ssmssqlproj", "{0FA8221E-915A-488E-A2A3-C79104E556DA}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "Query Store and LQS", "Query Store and LQS\Query Store and LQS.ssmssqlproj", "{71E073F0-D59B-42AB-9D6E-44A0BA68F688}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "_Setup Scripts", "_Setup Scripts\_Setup Scripts.ssmssqlproj", "{B98AA493-828A-4844-BCF2-B9BF7728EB64}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Default|Default = Default|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0FA8221E-915A-488E-A2A3-C79104E556DA}.Default|Default.ActiveCfg = Default
+		{71E073F0-D59B-42AB-9D6E-44A0BA68F688}.Default|Default.ActiveCfg = Default
+		{B98AA493-828A-4844-BCF2-B9BF7728EB64}.Default|Default.ActiveCfg = Default
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,168 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="b61c70b4-3925-42ce-82bb-7066a461f640" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Dim Sales Territory</ID>
+  <Name>Sales Territory</Name>
+  <CreatedTimestamp>0001-01-01T08:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T08:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ARDiagramLayout</Name>
+      <Value>
+        <DiagramLayout ZoomPercent="100" ViewPortX="0" ViewPortY="0" xmlns="">
+          <Shapes NodeWidth="163">
+            <Shape Id="Sales Territory Region" Expanded="false">
+              <Attributes>
+                <Attribute Id="Sales Territory Region" />
+              </Attributes>
+              <Position x="20" y="20" />
+            </Shape>
+            <Shape Id="Sales Territory Country" Expanded="false">
+              <Attributes>
+                <Attribute Id="Sales Territory Country" />
+              </Attributes>
+              <Position x="228" y="20" />
+            </Shape>
+            <Shape Id="Sales Territory Group" Expanded="false">
+              <Attributes>
+                <Attribute Id="Sales Territory Group" />
+              </Attributes>
+              <Position x="437" y="20" />
+            </Shape>
+          </Shapes>
+        </DiagramLayout>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T08:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <ErrorConfiguration dwd:design-time-name="8f9e7cc2-a888-4a4c-b773-1d1be53b1a9f">
+    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="f447f7ec-3bf4-4692-8f3c-9da2001bc596">
+      <ID>Sales Territory Region</ID>
+      <Name>Sales Territory Region</Name>
+      <Usage>Key</Usage>
+      <EstimatedCount>11</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="00b1d634-c1a2-4cc1-a805-6f4d88a8c8c9">
+          <DataType>Integer</DataType>
+          <DataSize>-1</DataSize>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="1f107b37-a182-441e-ace1-dc798cba0900">
+        <DataType>WChar</DataType>
+        <DataSize>50</DataSize>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="ffdc514e-76bf-4df6-9841-a42078a11882">
+          <AttributeID>Sales Territory Country</AttributeID>
+          <RelationshipType>Rigid</RelationshipType>
+          <Name>Sales Territory Country</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <InstanceSelection>DropDown</InstanceSelection>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="9b62614b-0cb0-4d79-862c-33d9a7725b4e">
+      <ID>Sales Territory Country</ID>
+      <Name>Sales Territory Country</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="9645d321-7615-4cc4-87bf-3e0ba2fa9018">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="0ebe547f-f3a1-4ef6-80ba-a22cc94fce66">
+          <AttributeID>Sales Territory Group</AttributeID>
+          <RelationshipType>Rigid</RelationshipType>
+          <Name>Sales Territory Group</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <InstanceSelection>DropDown</InstanceSelection>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="131a3f43-fa69-46b2-aa7d-f6ad7f66d782">
+      <ID>Sales Territory Group</ID>
+      <Name>Sales Territory Group</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="ca85136e-6d97-4dfe-b39f-d982d9005936">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <InstanceSelection>DropDown</InstanceSelection>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <AttributeAllMemberName>All Sales Territories</AttributeAllMemberName>
+  <Hierarchies>
+    <Hierarchy dwd:design-time-name="3bd5c821-44ff-4921-b232-5b4a908e31be">
+      <ID>Hierarchy</ID>
+      <Name>Sales Territory</Name>
+      <AllMemberName>All Sales Territories</AllMemberName>
+      <Levels>
+        <Level dwd:design-time-name="332c6964-e5f2-4758-8426-2d212d68a9a7">
+          <ID>Sales Territory Group</ID>
+          <Name>Sales Territory Group</Name>
+          <SourceAttributeID>Sales Territory Group</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="09ecd14c-e9af-4634-a183-965fd807491d">
+          <ID>Sales Territory Country</ID>
+          <Name>Sales Territory Country</Name>
+          <SourceAttributeID>Sales Territory Country</SourceAttributeID>
+          <HideMemberIf>OnlyChildWithParentName</HideMemberIf>
+        </Level>
+        <Level dwd:design-time-name="0f75770c-1f8e-4f95-b211-dc9698ed5c43">
+          <ID>Sales Territory Region</ID>
+          <Name>Sales Territory Region</Name>
+          <SourceAttributeID>Sales Territory Region</SourceAttributeID>
+          <HideMemberIf>OnlyChildWithParentName</HideMemberIf>
+        </Level>
+      </Levels>
+    </Hierarchy>
+  </Hierarchies>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>

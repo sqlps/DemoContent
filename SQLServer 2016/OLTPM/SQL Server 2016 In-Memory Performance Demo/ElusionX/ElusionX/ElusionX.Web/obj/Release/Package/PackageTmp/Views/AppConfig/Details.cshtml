@@ -1,0 +1,67 @@
+﻿@model ElusionX.Web.DataModel.ApplicationConfiguration
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="container" style="margin-top:-25px" id="mainContainer">
+    <h2>Details</h2>
+    @Html.ActionLink("Back to List", "Index")
+    <div>
+        <h4>Application Configuration</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Name)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Name)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.MinCommandTimeOut)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.MinCommandTimeOut)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.MaxCommandTimeOut)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.MaxCommandTimeOut)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.NumberOfOrders)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.NumberOfOrders)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.NumberOfUsers)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.NumberOfUsers)
+            </dd>
+
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.ApplicationConfigurationID }) |
+    </p>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#inmemorybuttons').hide();
+    })
+</script>

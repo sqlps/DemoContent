@@ -1,0 +1,1 @@
+sqlcmd -E -SPankajTSP-SQL01 -iregression.sql

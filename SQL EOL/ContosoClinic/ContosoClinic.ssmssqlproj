@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<SqlWorkbenchSqlProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="ContosoClinic">
+  <Items>
+    <LogicalFolder Name="Connections" Type="2" Sorted="true">
+      <Items>
+        <ConnectionNode Name="pankajtsp.database.windows.net:LoaderLGRC">
+          <Created>2018-11-05T16:19:12.7066892-05:00</Created>
+          <Type>SQL</Type>
+          <Server>pankajtsp.database.windows.net</Server>
+          <UserName>LoaderLGRC</UserName>
+          <Authentication>SQL</Authentication>
+          <InitialDB />
+          <LoginTimeout>30</LoginTimeout>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName>Microsoft SQL Server Management Studio - Query</ApplicationName>
+        </ConnectionNode>
+        <ConnectionNode Name="pankajtsp.database.windows.net:pankaj79">
+          <Created>2018-10-03T14:44:13.7420266-04:00</Created>
+          <Type>SQL</Type>
+          <Server>pankajtsp.database.windows.net</Server>
+          <UserName>pankaj79</UserName>
+          <Authentication>SQL</Authentication>
+          <InitialDB>dsmeta</InitialDB>
+          <LoginTimeout>30</LoginTimeout>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName>Microsoft SQL Server Management Studio - Query</ApplicationName>
+        </ConnectionNode>
+        <ConnectionNode Name="sql2008-eol:PANKAJTSP\pankajadmin">
+          <Created>2018-10-03T14:19:03.500919-04:00</Created>
+          <Type>SQL</Type>
+          <Server>sql2008-eol</Server>
+          <UserName />
+          <Authentication>Windows Authentication</Authentication>
+          <InitialDB>clinic</InitialDB>
+          <LoginTimeout>30</LoginTimeout>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName>Microsoft SQL Server Management Studio - Query</ApplicationName>
+        </ConnectionNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="Queries" Type="0" Sorted="true">
+      <Items>
+        <FileNode Name="_fix applicationlogins.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:sql2008-eol:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>sql2008-eol</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>_fix applicationlogins.sql</FullPath>
+        </FileNode>
+        <FileNode Name="_sp_revlogin.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:sql2008-eol:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>sql2008-eol</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>_sp_revlogin.sql</FullPath>
+        </FileNode>
+        <FileNode Name="1 - Prep DB for DMS.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:sql2008-eol:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>sql2008-eol</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>1 - Prep DB for DMS.sql</FullPath>
+        </FileNode>
+        <FileNode Name="2 - Create ClinicDB.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:pankajtsp.database.windows.net:False:LoaderLGRC</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>pankajtsp.database.windows.net</AssociatedConnSrvName>
+          <AssociatedConnUserName>LoaderLGRC</AssociatedConnUserName>
+          <FullPath>2 - Create ClinicDB.sql</FullPath>
+        </FileNode>
+        <FileNode Name="3 - Enable-DDM.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:pankajtsp.database.windows.net:False:pankaj79</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>pankajtsp.database.windows.net</AssociatedConnSrvName>
+          <AssociatedConnUserName>pankaj79</AssociatedConnUserName>
+          <FullPath>3 - Enable-DDM.sql</FullPath>
+        </FileNode>
+        <FileNode Name="4 - Enable-RLS.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:pankajtsp.database.windows.net:False:pankaj79</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>pankajtsp.database.windows.net</AssociatedConnSrvName>
+          <AssociatedConnUserName>pankaj79</AssociatedConnUserName>
+          <FullPath>4 - Enable-RLS.sql</FullPath>
+        </FileNode>
+        <FileNode Name="5 - Cleanup.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:pankajtsp.database.windows.net:False:pankaj79</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>pankajtsp.database.windows.net</AssociatedConnSrvName>
+          <AssociatedConnUserName>pankaj79</AssociatedConnUserName>
+          <FullPath>5 - Cleanup.sql</FullPath>
+        </FileNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="Miscellaneous" Type="3" Sorted="true">
+      <Items />
+    </LogicalFolder>
+  </Items>
+</SqlWorkbenchSqlProject>

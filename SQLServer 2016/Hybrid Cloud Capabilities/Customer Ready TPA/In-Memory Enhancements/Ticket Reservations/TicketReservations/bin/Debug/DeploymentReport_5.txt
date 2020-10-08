@@ -1,0 +1,21 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       None
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       None
+
+** User actions
+     Create
+       [mod] (Filegroup)
+       [dbo].[TicketReservationDetail] (Table)
+       [dbo].[TicketReservationSequence] (Sequence)
+       [dbo].[Demo_Reset] (Procedure)
+       [dbo].[InsertReservationDetails] (Procedure)
+       [dbo].[ReadMultipleReservations] (Procedure)
+       [dbo].[BatchInsertReservations] (Procedure)
+
+** Supporting actions

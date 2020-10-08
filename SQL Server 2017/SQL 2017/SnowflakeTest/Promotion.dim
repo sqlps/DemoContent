@@ -1,0 +1,293 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="3d116d51-9327-4cdb-8eac-6b6aff9ca2b4" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Dim Promotion</ID>
+  <Name>Promotion</Name>
+  <CreatedTimestamp>0001-01-01T08:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T08:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ARDiagramLayout</Name>
+      <Value>
+        <DiagramLayout ZoomPercent="100" ViewPortX="0" ViewPortY="0" xmlns="">
+          <Shapes NodeWidth="145">
+            <Shape Id="Promotion Name" Expanded="true">
+              <Attributes>
+                <Attribute Id="Promotion Name" />
+                <Attribute Id="Discount Pct" />
+                <Attribute Id="End Date" />
+                <Attribute Id="Max Qty" />
+                <Attribute Id="Min Qty" />
+                <Attribute Id="Promotion Type" />
+                <Attribute Id="Start Date" />
+              </Attributes>
+              <Position x="20" y="20" />
+            </Shape>
+            <Shape Id="Promotion Category" Expanded="false">
+              <Attributes>
+                <Attribute Id="Promotion Category" />
+              </Attributes>
+              <Position x="206" y="20" />
+            </Shape>
+          </Shapes>
+        </DiagramLayout>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T08:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Type>Promotion</Type>
+  <ErrorConfiguration dwd:design-time-name="5110ffdd-a90d-4d02-a602-e4e8233153b7">
+    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="c0908495-ecd6-424d-a62d-8767b6b6cf2a">
+      <ID>Promotion Name</ID>
+      <Name>Promotion</Name>
+      <Type>Promotion</Type>
+      <Usage>Key</Usage>
+      <EstimatedCount>16</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="af37e1d3-0934-466b-b5ca-5231749c163a">
+          <DataType>Integer</DataType>
+          <DataSize>-1</DataSize>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="c6b44d1b-8a78-4e8d-b21e-fd6e854ff494">
+        <DataType>WChar</DataType>
+        <DataSize>255</DataSize>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="a8ed6c30-0324-4034-8a40-cc4f2c29eec0">
+          <AttributeID>Discount Pct</AttributeID>
+          <Name>Discount Percent</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="b389371a-f8b7-4957-98b4-27b78ef10726">
+          <AttributeID>Max Qty</AttributeID>
+          <Name>Max Quantity</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="36fc0eca-04e7-4142-9e7d-d1a2b3a3c85e">
+          <AttributeID>Promotion Type</AttributeID>
+          <Name>Promotion Type</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="f8d50499-6579-4941-8181-112079bfb087">
+          <AttributeID>Min Qty</AttributeID>
+          <Name>Min Quantity</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="db836d47-1850-4d71-bc17-7070e4ce83e9">
+          <AttributeID>Promotion Category</AttributeID>
+          <RelationshipType>Rigid</RelationshipType>
+          <Name>Promotion Category</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="6a494291-f7ad-4af6-9259-ef8ae0589dd3">
+          <AttributeID>End Date</AttributeID>
+          <Name>End Date</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="506051ec-9915-4a63-a4fc-7f526fc38064">
+          <AttributeID>Start Date</AttributeID>
+          <Name>Start Date</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>AttributeKey</OrderBy>
+      <OrderByAttributeID>Start Date</OrderByAttributeID>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <InstanceSelection>DropDown</InstanceSelection>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="f64116bc-8281-469b-adc9-e2612ceef4ab">
+      <ID>Discount Pct</ID>
+      <Name>Discount Percent</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="58aac3a5-9f3e-4b66-a21d-86079f276d95">
+          <DataType>Double</DataType>
+          <DataSize>-1</DataSize>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="c8a89c04-3ab9-4aac-9484-65c18fc2fe66">
+        <DataType>WChar</DataType>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ValueColumn dwd:design-time-name="98a806e4-bbc0-4b39-9f61-fd58d64f8e1f">
+        <DataType>Double</DataType>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="73a18211-45c6-4211-a420-06351e212a64">
+          <TableID>dbo_DimPromotion</TableID>
+          <ColumnID>DiscountPct</ColumnID>
+        </Source>
+      </ValueColumn>
+      <InstanceSelection>DropDown</InstanceSelection>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="946814f1-31c4-4161-8b35-dd13373e81bf">
+      <ID>Max Qty</ID>
+      <Name>Max Quantity</Name>
+      <Type>QtyRangeHigh</Type>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="08451adc-aa5e-4482-a1bb-383bd56710a0">
+          <DataType>Integer</DataType>
+          <DataSize>-1</DataSize>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="5f3b2097-0e0e-4612-bd7b-a972a14613ef">
+        <DataType>WChar</DataType>
+      </NameColumn>
+      <ValueColumn dwd:design-time-name="bdfc2d3b-3865-4ea4-a842-bdd522417d23">
+        <DataType>Integer</DataType>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="82a3ffad-0d7f-4acb-9e2d-5cc75800043b">
+          <TableID>dbo_DimPromotion</TableID>
+          <ColumnID>MaxQty</ColumnID>
+        </Source>
+      </ValueColumn>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="1e7c5e29-df4f-4e09-892c-40727ec2f8a2">
+      <ID>Promotion Type</ID>
+      <Name>Promotion Type</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="2a4cf590-4631-4f02-b0e5-df028f7cf0cc">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+        </KeyColumn>
+      </KeyColumns>
+      <InstanceSelection>DropDown</InstanceSelection>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="64091659-e97e-44d7-8caa-86407becbad8">
+      <ID>Min Qty</ID>
+      <Name>Min Quantity</Name>
+      <Type>QtyRangeLow</Type>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="0449f91c-6932-4272-8e7c-68fd5b76f3ed">
+          <DataType>Integer</DataType>
+          <DataSize>-1</DataSize>
+        </KeyColumn>
+      </KeyColumns>
+      <InstanceSelection>DropDown</InstanceSelection>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="da929f3d-c674-495c-b4c4-805e9913218f">
+      <ID>Promotion Category</ID>
+      <Name>Promotion Category</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="61e5562f-034d-469c-8726-f9c98d4c06c6">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <InstanceSelection>DropDown</InstanceSelection>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="fee177eb-5552-4e33-a822-df02fe00c46c">
+      <ID>End Date</ID>
+      <Name>End Date</Name>
+      <Type>DateEnded</Type>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="f70b2f83-5cb7-4271-826a-48eb8e88c8ac">
+          <DataType>Date</DataType>
+          <DataSize>-1</DataSize>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="ceefd406-4505-4c15-98eb-5b767a09d2a5">
+        <DataType>WChar</DataType>
+        <DataSize>93</DataSize>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ValueColumn dwd:design-time-name="df3e337f-b54f-48a5-af13-2121c2e4bdfd">
+        <DataType>Date</DataType>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="fc4b4248-cb17-44f6-91bd-099138271f07">
+          <TableID>dbo_DimPromotion</TableID>
+          <ColumnID>EndDate</ColumnID>
+        </Source>
+      </ValueColumn>
+      <InstanceSelection>DropDown</InstanceSelection>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="76aa7414-7e5a-4955-8e95-efb498a1f84c">
+      <ID>Start Date</ID>
+      <Name>Start Date</Name>
+      <Type>DateStart</Type>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="807d0eff-b562-4c56-af8e-e2781027c41f">
+          <DataType>Date</DataType>
+          <DataSize>-1</DataSize>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="043ffa6f-5e14-42da-93e2-c066e2f1dce7">
+        <DataType>WChar</DataType>
+        <DataSize>93</DataSize>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ValueColumn dwd:design-time-name="1480f0b9-d1eb-46e6-b7d1-b8600fd6dc0a">
+        <DataType>Date</DataType>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="4c211354-84a6-4e88-ac26-801a3be6dff7">
+          <TableID>dbo_DimPromotion</TableID>
+          <ColumnID>StartDate</ColumnID>
+        </Source>
+      </ValueColumn>
+      <InstanceSelection>DropDown</InstanceSelection>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <AttributeAllMemberName>All Promotions</AttributeAllMemberName>
+  <Hierarchies>
+    <Hierarchy dwd:design-time-name="851a246a-b902-4319-8922-ba15a4e0bd99">
+      <ID>Hierarchy</ID>
+      <Name>Promotions</Name>
+      <Levels>
+        <Level dwd:design-time-name="c6082ca8-3cf3-4051-9301-5dc9a9571753">
+          <ID>Promotion Category</ID>
+          <Name>Promotion Category</Name>
+          <SourceAttributeID>Promotion Category</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="66646045-8651-46c6-ad3d-cf1605fa6bda">
+          <ID>Promotion</ID>
+          <Name>Promotion</Name>
+          <SourceAttributeID>Promotion Name</SourceAttributeID>
+        </Level>
+      </Levels>
+    </Hierarchy>
+  </Hierarchies>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>

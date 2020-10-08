@@ -1,0 +1,104 @@
+﻿<div class="container" id="maincontainer-realtime" style="min-height:600px">
+    <div class="row" style="height:60px;">
+        <div class="col-sm-2 col-lg-2 cont">
+            <h4 style="text-align:left">Traditional Analytics</h4>
+        </div>
+        <div class="col-sm-4 col-lg-4 cont">
+            <div>
+               
+                <button id="tr-analyzesales" class="btn btn-primary pull-right"
+                        style="border-radius:10px;margin-left:10px">
+                    Analyze Sales
+                </button>
+                <button id="tr-runetl" class="btn btn-primary pull-right"
+                        style="border-radius:10px">
+                    Run ETL
+                </button>
+            </div>
+        </div>
+        <div class="col-sm-2 col-lg-2 cont">
+            <h4 style="text-align:left">Realtime Analytics</h4>
+        </div>
+        <div class="col-sm-4 col-lg-4 cont">
+            <button id="rt-analyzesales" class="btn btn-primary pull-right"
+                    style="border-radius:10px">
+                Analyze Sales
+            </button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4 col-lg-4 cont">
+            <div class="half-unit" style="height:350px">
+                <dtitle>Orders Revenue</dtitle>
+                <hr>
+                <div id="row">
+                    <div id="tr-ordersrevenue">
+                    </div>
+                </div>
+                <button class="btn btn-danger"
+                        style="border-radius:10px;margin-left:10px">
+                    Order Count <span class="badge" id="tr-ordercount">0</span>
+                </button>
+            </div>
+        </div>
+        <div class="col-sm-2 col-lg-2 cont">
+            <div class="half-unit" style="height:350px">
+                <dtitle>Profit</dtitle>
+                <hr>
+                <div id="row">
+                    <b><bad>Profit Target: <span id="tr-span-salestarget"></span></bad></b>
+                    <div id="tr-dayprofit">
+                    </div>
+                    <b><bad>Profit: <span id="tr-span-dayprofit" style="font-size:16px"></span></bad></b><br />
+                    <b><bad>Profit Percentage: <span id="tr-span-dayprofitperc" style="font-size:16px"></span></bad></b>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4 col-lg-4 cont">
+            <div class="half-unit" style="height:350px">
+                <dtitle>Orders Revenue</dtitle>
+                <hr>
+                <div id="row">
+                    <div id="rt-ordersrevenue">
+                    </div>
+                </div>
+                <button class="btn btn-success"
+                        style="border-radius:10px;margin-left:10px">
+                    Order Count <span class="badge" id="rt-ordercount">0</span>
+                </button>
+            </div>
+        </div>
+        <div class="col-sm-2 col-lg-2 cont">
+            <div class="half-unit" style="height:350px">
+                <dtitle>Profit</dtitle>
+                <hr>
+                <div id="row">
+                    <b><ok>Profit Target: <span id="rt-span-salestarget" style="font-size:16px"></span></ok></b>
+                    <div id="rt-dayprofit">
+                    </div>
+                    <b><ok>Profit: <span id="rt-span-dayprofit" style="font-size:16px"></span></ok></b><br />
+                    <b><ok>Profit Percentage: <span id="rt-span-dayprofitperc" style="font-size:16px"></span></ok></b>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6 col-lg-6 cont">
+        </div>
+        <div class="col-sm-6 col-lg-6 cont">
+            <div class="half-unit" style="height:300px">
+                <dtitle>Orders Revenue in Last Hour</dtitle>
+                <hr />
+                <div id="row">
+                    <div id="rt-ordersprofit">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@Scripts.Render("~/bundles/realtimejavascripts")
+
+
+
+

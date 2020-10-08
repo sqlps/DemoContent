@@ -1,0 +1,18 @@
+14.0
+16
+1       SQLCHAR             0       12      "|"        1     L_ORDERKEY                         ""
+2       SQLCHAR             0       12      "|"        2     L_PARTKEY                          ""
+3       SQLCHAR             0       12      "|"        3     L_SUPPKEY                          ""
+4       SQLCHAR             0       12      "|"        4     L_LINENUMBER                       ""
+5       SQLCHAR             0       41      "|"        5     L_QUANTITY                         ""
+6       SQLCHAR             0       41      "|"        6     L_EXTENDEDPRICE                    ""
+7       SQLCHAR             0       41      "|"        7     L_DISCOUNT                         ""
+8       SQLCHAR             0       41      "|"        8     L_TAX                              ""
+9       SQLCHAR             0       1       "|"        9     L_RETURNFLAG                       SQL_Latin1_General_CP1_CI_AS
+10      SQLCHAR             0       1       "|"        10    L_LINESTATUS                       SQL_Latin1_General_CP1_CI_AS
+11      SQLCHAR             0       11      "|"        11    L_SHIPDATE                         ""
+12      SQLCHAR             0       11      "|"        12    L_COMMITDATE                       ""
+13      SQLCHAR             0       11      "|"        13    L_RECEIPTDATE                      ""
+14      SQLCHAR             0       25      "|"        14    L_SHIPINSTRUCT                     SQL_Latin1_General_CP1_CI_AS
+15      SQLCHAR             0       10      "|"        15    L_SHIPMODE                         SQL_Latin1_General_CP1_CI_AS
+16      SQLCHAR             0       44      "|\r\n"    16    L_COMMENT                          SQL_Latin1_General_CP1_CI_AS

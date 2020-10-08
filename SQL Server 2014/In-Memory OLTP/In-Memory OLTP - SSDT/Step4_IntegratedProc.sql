@@ -1,0 +1,26 @@
+﻿CREATE PROCEDURE [dbo].InsertValue
+	@rowcount INT
+WITH NATIVE_COMPILATION, SCHEMABINDING, EXECUTE AS OWNER 
+AS BEGIN ATOMIC WITH (
+      TRANSACTION ISOLATION LEVEL = SNAPSHOT,
+      LANGUAGE = 'english')
+
+	DECLARE @i INT = 1
+	DECLARE @c NCHAR(50) = N'12345678901234567890123456789012345678'
+
+	DECLARE @starttime DATETIME2 = SYSDATETIME(),
+        @duration INT	
+
+	WHILE @i < @rowcount
+	BEGIN
+			INSERT INTO dbo.[Value] VALUES (@i, @c)
+			SET @i += 1
+	END
+	
+SET @duration = DATEDIFF(ms, @starttime, SYSDATETIME())
+SELECT 'Insert into Hekaton Table with NC Proc: ' + CAST(@duration as VARCHAR(10)) + ' ms'
+
+DELETE FROM dbo.Value
+
+RETURN 0
+END

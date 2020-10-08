@@ -1,0 +1,24 @@
+﻿<div id="homePage" data-bind="with: homeViewModel">
+    <div data-bind="slideIn: pageHasLoaded">
+        <div class="last-update-time"><span class="hack-backrgound3" data-bind="text: lastUpdate"></span></div>
+        <div data-bind="foreach: productTypeSection">
+            <div style="position: relative">
+                <div style="position: relative; margin: 20px 0 0 0;">
+                    <h2 data-bind="text: productType().name" class="product-type-header"></h2>
+                    <div class="drop-down">Ranked by popularity</div>
+                </div>
+                <div data-bind="foreach: products, slideDown: hasProducts" class="product-type-products">
+                    <div class="product-small">
+                        <div>
+                            <img data-bind="attr: { src: imageUrl }, click: gotoPage" />
+                        </div>
+                        <div class="product-small-text" data-bind="text: name, click: gotoPage">
+                        </div>
+                    </div>
+                </div>
+                <div class="forward-button" data-bind="visible: hasProducts" ><img src="~/Images/Forward.png"/></div>
+                <div class="back-button" data-bind="visible: hasProducts" ><img src="~/Images/Back.png"/></div>
+            </div>
+        </div>
+    </div>
+</div>

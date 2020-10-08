@@ -1,0 +1,172 @@
+﻿<div class="tab-pane fade" id="performancesummary" style="display:none">
+    <div class="panel-group" id="accordion">
+        <div class="panel panel-default" id="panel1">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-target="#technicalmetrics"
+                       href="#technicalmetrics">
+                        Business Metrics
+                    </a>
+                </h4>
+            </div>
+            <div id="technicalmetrics" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-sm-6 col-lg-6 cont" style="height:460px">
+                            <div class="half-unit" style="margin-bottom:10px;height:460px">
+                                <div class="row">
+                                    <div class="col-sm-6 col-lg-6 cont">
+                                        <div class="value" id="d-p-estimatedloss"></div>
+                                        <div class="desc">Estimated Loss</div>
+                                    </div>
+                                    <div class="col-sm-6 col-lg-6 cont">
+                                        <div class="value" id="d-p-totalorders"></div>
+                                        <div class="desc">Succeeded Orders</div>
+                                    </div>
+                                </div>
+                                <div class="row" style="margin-top:50px">
+                                    <div class="col-sm-6 col-lg-6 cont">
+                                        <div class="value" id="d-p-totalvalue"></div>
+                                        <div class="desc">Total Order Value</div>
+                                    </div>
+                                    <div class="col-sm-6 col-lg-6 cont">
+                                        <div class="value" id="d-p-avgvalue"></div>
+                                        <div class="desc">Avg. Order Value</div>
+                                    </div>
+                                </div>
+                                <div class="row" style="margin-top:50px">
+                                    <div class="col-sm-4 col-lg-4 cont">
+                                        <div class="value" id="d-p-totaltime"></div>
+                                        <div class="desc">Total Time</div>
+                                    </div>
+                                    <div class="col-sm-4 col-lg-4 cont">
+                                        <div class="value" id="d-p-avgtime"></div>
+                                        <div class="desc">Average Time Per order</div>
+                                    </div>
+                                    <div class="col-sm-4 col-lg-4 cont">
+                                        <div class="value" id="d-p-users"></div>
+                                        <div class="desc">
+                                            <span class="glyphicon glyphicon-user"></span>
+                                            Users
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-6 cont" style="height:460px">
+                            <div class="half-unit" style="margin-bottom:10px;height:460px">
+                                <div class="row">
+                                    <div class="col-sm-6 col-lg-6 cont">
+                                        <div class="value" id="i-p-estimatedloss"></div>
+                                        <div class="desc">Estimated Loss</div>
+                                    </div>
+                                    <div class="col-sm-6 col-lg-6 cont">
+                                        <div class="value" id="i-p-totalorders"></div>
+                                        <div class="desc">Succeeded Orders</div>
+                                    </div>
+                                </div>
+                                <div class="row" style="margin-top:50px">
+                                    <div class="col-sm-6 col-lg-6 cont">
+                                        <div class="value" id="i-p-totalvalue"></div>
+                                        <div class="desc">Total Order Value</div>
+                                    </div>
+                                    <div class="col-sm-6 col-lg-6 cont">
+                                        <div class="value" id="i-p-avgvalue"></div>
+                                        <div class="desc">Avg. Order Value</div>
+                                    </div>
+                                </div>
+                                <div class="row" style="margin-top:50px">
+                                    <div class="col-sm-4 col-lg-4 cont">
+                                        <div class="value" id="i-p-totaltime"></div>
+                                        <div class="desc">
+                                            <p id="perimpr-panel" style="margin:0px;display:inline">
+                                                <span class="glyphicon glyphicon-upload"></span>&nbsp;<span id="perfsummary-impr"></span>
+                                            </p>
+                                            Total Time
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4 col-lg-4 cont">
+                                        <div class="value" id="i-p-timeperorder"></div>
+                                        <div class="desc">Average Time Per order</div>
+                                    </div>
+                                    <div class="col-sm-4 col-lg-4 cont">
+                                        <div class="value" id="i-p-users"></div>
+                                        <div class="desc">
+                                            <span class="glyphicon glyphicon-user"></span>
+                                            Users
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default" id="panel2">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-target="#businessmetrics"
+                           href="#businessmetrics" class="collapsed" data-chart="1">
+                            Technical Metrics
+                        </a>
+                    </h4>
+                </div>
+                <div id="businessmetrics" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <div class="row" style="margin-top:10px;margin-bottom:10px">
+                            <div class="col-sm-2 col-lg-2 cont" style="height:260px">
+                                <div class="half-unit" style="margin-bottom:10px;height:260px">
+                                    <div class="row">
+                                        <div class="col-sm-12 col-lg-12 cont">
+                                            <div class="value" id="d-p-avglatches"></div>
+                                            <div class="desc">Avg Latches</div>
+                                        </div>
+                                    </div>
+                                    <div class="row" style="margin-top:15px">
+                                        <div class="col-sm-12 col-lg-12 cont">
+                                            <div class="value" id="d-p-avgbr"></div>
+                                            <div class="desc">Avg Batch Requests</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 col-lg-4 cont" style="height:260px">
+                                <div class="half-unit" style="height:260px">
+                                    <div class="graph-title">CPU</div>
+                                    <div class="chart-wrapper" style="height:210px">
+                                        <div id="d-p-tmetrics2" style="height:100%;width:100%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-2 col-lg-2 cont" style="height:260px">
+                                <div class="half-unit" style="margin-bottom:10px;height:260px">
+                                    <div class="row">
+                                        <div class="col-sm-12 col-lg-12 cont">
+                                            <div class="value" id="i-p-avglatches"></div>
+                                            <div class="desc">Avg Latches</div>
+                                        </div>
+                                    </div>
+                                    <div class="row" style="margin-top:15px">
+                                        <div class="col-sm-12 col-lg-12 cont">
+                                            <div class="value" id="i-p-avgbr"></div>
+                                            <div class="desc">Avg Batch Requests</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 col-lg-4 cont" style="height:260px">
+                                <div class="half-unit" style="height:260px">
+                                    <div class="graph-title">CPU</div>
+                                    <div class="chart-wrapper" style="height:210px">
+                                        <div id="i-p-tmetrics2" style="height:100%;width:100%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

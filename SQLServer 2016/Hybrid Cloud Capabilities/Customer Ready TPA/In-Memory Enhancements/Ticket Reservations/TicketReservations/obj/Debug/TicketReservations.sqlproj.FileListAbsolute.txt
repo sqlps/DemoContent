@@ -1,0 +1,5 @@
+C:\Demos\SQLServer 2016\Hybrid Cloud Capabilities\In-Memory Enhancements\Ticket Reservations\TicketReservations\bin\Debug\TicketReservations.dacpac
+C:\Demos\SQLServer 2016\Hybrid Cloud Capabilities\In-Memory Enhancements\Ticket Reservations\TicketReservations\bin\Debug\TicketReservations.dll
+C:\Demos\SQLServer 2016\Hybrid Cloud Capabilities\In-Memory Enhancements\Ticket Reservations\TicketReservations\bin\Debug\TicketReservations.pdb
+C:\Demos\SQLServer 2016\Hybrid Cloud Capabilities\In-Memory Enhancements\Ticket Reservations\TicketReservations\obj\Debug\TicketReservations.dll
+C:\Demos\SQLServer 2016\Hybrid Cloud Capabilities\In-Memory Enhancements\Ticket Reservations\TicketReservations\obj\Debug\TicketReservations.pdb

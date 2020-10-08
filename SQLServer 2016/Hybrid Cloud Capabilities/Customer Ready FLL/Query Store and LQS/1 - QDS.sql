@@ -1,0 +1,103 @@
+-- ====================================
+-- Step 1) Run the Workload
+-- ====================================
+-- Run PowerShell Script .\QueryStoreDemo.ps1
+
+-- ====================================
+-- Step 2) The DMVs
+-- ====================================
+-- all times are in microseconds
+-- timezone it UTC for dates
+
+Select * from sys.time_zone_info
+
+Use AdventureWorks2016CTP3
+GO
+-- 2.1 Last N queries that were executed on the database
+SELECT TOP 10 qt.query_sql_text, q.query_id, qt.query_text_id, p.plan_id, rs.last_execution_time AT TIME ZONE 'Eastern Standard Time'
+FROM
+	sys.query_store_query_text qt JOIN 
+	sys.query_store_query q ON qt.query_text_id = q.query_text_id JOIN
+	sys.query_store_plan p ON q.query_id = p.query_id JOIN
+	sys.query_store_runtime_stats rs ON p.plan_id = rs.plan_id
+ORDER BY rs.last_execution_time DESC
+GO
+
+-- 2.2 Count of executions for each query
+SELECT q.query_id, qt.query_text_id, qt.query_sql_text, 
+SUM(rs.count_executions) AS total_execution_count
+FROM
+	sys.query_store_query_text qt JOIN 
+	sys.query_store_query q ON qt.query_text_id = q.query_text_id JOIN
+	sys.query_store_plan p ON q.query_id = p.query_id JOIN
+	sys.query_store_runtime_stats rs ON p.plan_id = rs.plan_id
+GROUP BY q.query_id, qt.query_text_id, qt.query_sql_text
+ORDER BY total_execution_count DESC
+GO
+
+-- 2.3 N queries with longest average execution time within last hour
+SELECT TOP 10 qt.query_sql_text, q.query_id, qt.query_text_id, p.plan_id, 
+getutcdate() as CurrentUTCTime, rs.last_execution_time, rs.avg_duration
+FROM
+	sys.query_store_query_text qt JOIN 
+	sys.query_store_query q ON qt.query_text_id = q.query_text_id JOIN
+	sys.query_store_plan p ON q.query_id = p.query_id JOIN
+	sys.query_store_runtime_stats rs ON p.plan_id = rs.plan_id
+WHERE rs.last_execution_time > dateadd(hour, -1, getutcdate())
+ORDER BY rs.avg_duration DESC
+GO
+
+-- 2.4 N queries that had the biggest average physical IO reads in last 24 hours, 
+--    with corresponding average row count and execution count
+SELECT TOP 10 qt.query_sql_text, q.query_id, qt.query_text_id, p.plan_id, 
+rs.runtime_stats_id, rsi.start_time, rsi.end_time, rs.avg_physical_io_reads, 
+rs.avg_rowcount, rs.count_executions
+FROM
+	sys.query_store_query_text qt JOIN 
+	sys.query_store_query q ON qt.query_text_id = q.query_text_id JOIN
+	sys.query_store_plan p ON q.query_id = p.query_id JOIN
+	sys.query_store_runtime_stats rs ON p.plan_id = rs.plan_id JOIN
+	sys.query_store_runtime_stats_interval rsi ON rsi.runtime_stats_interval_id = rs.runtime_stats_interval_id
+WHERE rsi.start_time >= dateadd(hour, -24, getutcdate()) 
+ORDER BY rs.avg_physical_io_reads DESC
+GO
+
+-- 2.5 Queries that recently regressed in performance
+--  The following query example returns all queries which execution time was 
+--   doubled in last 48 hours.
+SELECT 
+	qt.query_sql_text, 
+	q.query_id, 
+	qt.query_text_id, 
+	p1.plan_id AS plan1, 
+	rsi1.start_time AS runtime_stats_interval_1, 
+	rs1.runtime_stats_id AS runtime_stats_id_1,
+	rs1.avg_duration AS avg_duration_1, 
+	p2.plan_id AS plan2, 
+	rsi2.start_time AS runtime_stats_interval_2, 
+	rs2.runtime_stats_id AS runtime_stats_id_2,
+	rs2.avg_duration AS avg_duration_2
+FROM
+	sys.query_store_query_text qt JOIN 
+	sys.query_store_query q ON qt.query_text_id = q.query_text_id JOIN
+	sys.query_store_plan p1 ON q.query_id = p1.query_id JOIN
+	sys.query_store_runtime_stats rs1 ON p1.plan_id = rs1.plan_id JOIN
+	sys.query_store_runtime_stats_interval rsi1 ON rsi1.runtime_stats_interval_id = rs1.runtime_stats_interval_id JOIN
+	sys.query_store_plan p2 ON q.query_id = p2.query_id JOIN
+	sys.query_store_runtime_stats rs2 ON p2.plan_id = rs2.plan_id JOIN
+	sys.query_store_runtime_stats_interval rsi2 ON rsi2.runtime_stats_interval_id = rs2.runtime_stats_interval_id
+WHERE
+	rsi1.start_time > dateadd(hour, -48, getutcdate()) AND
+	rsi2.start_time > rsi1.start_time AND
+	rs2.avg_duration > 2*rs1.avg_duration
+
+--From Bob Ward 
+Select qp.query_id, qp.plan_id, qr.avg_duration/1000 as avg_duration_ms, qp.*
+From sys.query_store_plan qp
+join sys.query_store_runtime_stats qr
+on qp.plan_id = qr.plan_id
+where query_id = 1
+order by qr.avg_duration desc
+	
+
+

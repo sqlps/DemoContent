@@ -1,0 +1,56 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# SQL Server Management Studio Solution File, Format Version 12.00
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "Resource Governor", "Resource Governor\Resource Governor.ssmssqlproj", "{12DEAA38-F485-4E48-89BE-2A643883D7BD}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "Buffer Pool Extension", "Buffer Pool Extension\Buffer Pool Extension.ssmssqlproj", "{A4D17181-8D9D-4C79-983F-A187144B1A3C}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "Backup to Azure", "Backup\Backup to Azure.ssmssqlproj", "{24450213-83F4-4334-9D51-11AC0C44710D}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "New CE Changes", "New CE Changes\New CE Changes.ssmssqlproj", "{0B201826-6188-48CC-A754-4B00C786442F}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "Wait Priority", "Online Operations\Wait Priority.ssmssqlproj", "{BBD951BE-3FB9-4299-A216-1B4BD7416000}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "In-Memory CSI", "In-Memory CSI\In-Memory CSI.ssmssqlproj", "{1823B2A4-B89D-4F40-80EE-A408C4C180B0}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "DBA OverView", "In-Memory OLTP\DeepDive\DBA OverView\DBA OverView.ssmssqlproj", "{F77D2E4E-209F-4103-95FA-0A43D0764F11}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "Separation of duties", "Separation of duties\Separation of duties.ssmssqlproj", "{5B0B55F9-BCF3-4220-8A7E-26AA547A9382}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "AlwaysON AG", "..\AlwaysON AG\AlwaysON AG.ssmssqlproj", "{09607D4D-87F6-4ED4-893D-9F75F3A141AE}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "Partitioning", "Partitioning\Partitioning.ssmssqlproj", "{C3A2AE23-C993-4D72-9338-1F604D4F8B99}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "Data Files in Azure", "Data Files in Azure\Data Files in Azure.ssmssqlproj", "{A1E1709A-AC34-4B71-84A7-5CF05FA5D664}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "AzureSQLDB", "..\Azure\AzureSQLDB\AzureSQLDB.ssmssqlproj", "{87BAC815-5911-42C7-8903-0C5B7391DA22}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "Perfomance DMVs", "Perfomance DMVs\Perfomance DMVs.ssmssqlproj", "{E399B758-AC4E-4C4D-B3C7-487E6E6B7146}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "TDE", "..\General SQL\TDE\TDE.ssmssqlproj", "{A0D59D24-9D3F-43F5-A176-CE0DB960D87B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Default|Default = Default|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{12DEAA38-F485-4E48-89BE-2A643883D7BD}.Default|Default.ActiveCfg = Default
+		{A4D17181-8D9D-4C79-983F-A187144B1A3C}.Default|Default.ActiveCfg = Default
+		{24450213-83F4-4334-9D51-11AC0C44710D}.Default|Default.ActiveCfg = Default
+		{0B201826-6188-48CC-A754-4B00C786442F}.Default|Default.ActiveCfg = Default
+		{BBD951BE-3FB9-4299-A216-1B4BD7416000}.Default|Default.ActiveCfg = Default
+		{1823B2A4-B89D-4F40-80EE-A408C4C180B0}.Default|Default.ActiveCfg = Default
+		{F77D2E4E-209F-4103-95FA-0A43D0764F11}.Default|Default.ActiveCfg = Default
+		{5B0B55F9-BCF3-4220-8A7E-26AA547A9382}.Default|Default.ActiveCfg = Default
+		{09607D4D-87F6-4ED4-893D-9F75F3A141AE}.Default|Default.ActiveCfg = Default
+		{C3A2AE23-C993-4D72-9338-1F604D4F8B99}.Default|Default.ActiveCfg = Default
+		{A1E1709A-AC34-4B71-84A7-5CF05FA5D664}.Default|Default.ActiveCfg = Default
+		{87BAC815-5911-42C7-8903-0C5B7391DA22}.Default|Default.ActiveCfg = Default
+		{E399B758-AC4E-4C4D-B3C7-487E6E6B7146}.Default|Default.ActiveCfg = Default
+		{24A535FD-D1D0-4E9A-BE8F-E38DAD6D567C}.Default|Default.ActiveCfg = Default
+		{A0D59D24-9D3F-43F5-A176-CE0DB960D87B}.Default|Default.ActiveCfg = Default
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

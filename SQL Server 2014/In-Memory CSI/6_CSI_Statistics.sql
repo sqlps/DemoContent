@@ -1,0 +1,32 @@
+--Use dm_db_stats_properties (New as of SQL 2008 R2 SP2 and 2012 SP1
+Use AdventureWorksDW2008Big_CCI
+GO
+
+SELECT sch.name + '.' + so.name AS 'Table', ss.name AS 'Statistic', 
+	CASE
+		WHEN ss.auto_Created = 0 AND ss.user_created = 0 THEN 'Index Statistic'
+		WHEN ss.auto_created = 0 AND ss.user_created = 1 THEN 'User Created'
+		WHEN ss.auto_created = 1 AND ss.user_created = 0 THEN 'Auto Created'
+		WHEN ss.AUTO_created = 1 AND ss.user_created = 1 THEN 'Not Possible?'
+	END AS 'Statistic Type',
+	CASE
+		WHEN ss.has_filter = 1 THEN 'Filtered Index'
+		WHEN ss.has_filter = 0 THEN 'No Filter'
+	END AS 'Filtered?', 
+	CASE
+		WHEN ss.filter_definition IS NULL THEN ''
+		WHEN ss.filter_definition IS NOT NULL THEN ss.filter_definition
+	END AS 'Filter Definition', 
+	sp.last_updated AS 'Stats Last Updated', sp.rows AS 'Rows', sp.rows_sampled AS 'Rows Sampled', Cast((sp.rows_sampled/(sp.rows*1.00))*100.0 AS numeric (5,2)) AS '%Sample',
+	sp.unfiltered_rows AS 'Unfiltered Rows', sp.modification_counter AS 'Row Modifications',
+	sp.steps AS 'Histogram Steps'
+FROM sys.stats ss
+JOIN sys.objects so ON ss.object_id = so.object_id
+JOIN sys.schemas sch ON so.schema_id = sch.schema_id
+OUTER APPLY sys.dm_db_stats_properties(so.object_id, ss.stats_id) AS sp 
+WHERE so.TYPE = 'U' and so.name ='FactSales'
+--AND sp.last_updated < getdate() - 30
+ORDER BY sp.last_updated
+DESC;
+
+--NOTE: Create Co-Related or MultiColumn Stats

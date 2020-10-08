@@ -1,0 +1,1 @@
+-- Run C:\Demos\SQL Server 2016 - WWI\Performance\IMOLTP\MultithreadedInMemoryTableInsert.exe

@@ -1,0 +1,1 @@
+start sqlcmd -S . -U UserB -P UserBPwd -i "CPUintensiveloop.sql"

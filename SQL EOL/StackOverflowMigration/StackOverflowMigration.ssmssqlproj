@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<SqlWorkbenchSqlProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="StackOverflowMigration">
+  <Items>
+    <LogicalFolder Name="Connections" Type="2" Sorted="true">
+      <Items>
+        <ConnectionNode Name="pankajtsp.database.windows.net:pankaj79">
+          <Created>2018-10-01T21:43:41.9956079-04:00</Created>
+          <Type>SQL</Type>
+          <Server>pankajtsp.database.windows.net</Server>
+          <UserName>pankaj79</UserName>
+          <Authentication>SQL</Authentication>
+          <InitialDB />
+          <LoginTimeout>30</LoginTimeout>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName>Microsoft SQL Server Management Studio - Query</ApplicationName>
+        </ConnectionNode>
+        <ConnectionNode Name="Pankajtsp-sql08:PANKAJTSP\pankajadmin">
+          <Created>2018-10-03T16:04:18.1372933-04:00</Created>
+          <Type>SQL</Type>
+          <Server>Pankajtsp-sql08</Server>
+          <UserName />
+          <Authentication>Windows Authentication</Authentication>
+          <InitialDB />
+          <LoginTimeout>30</LoginTimeout>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName>Microsoft SQL Server Management Studio - Query</ApplicationName>
+        </ConnectionNode>
+        <ConnectionNode Name="sql2008-eol:PANKAJTSP\pankajadmin">
+          <Created>2018-10-03T14:01:22.5291725-04:00</Created>
+          <Type>SQL</Type>
+          <Server>sql2008-eol</Server>
+          <UserName />
+          <Authentication>Windows Authentication</Authentication>
+          <InitialDB />
+          <LoginTimeout>30</LoginTimeout>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName>Microsoft SQL Server Management Studio - Query</ApplicationName>
+        </ConnectionNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="Queries" Type="0" Sorted="true">
+      <Items>
+        <FileNode Name="_sp_revlogin.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>_sp_revlogin.sql</FullPath>
+        </FileNode>
+        <FileNode Name="0 - Enable Agent XPs for Repl.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:sql2008-eol:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>sql2008-eol</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>0 - Enable Agent XPs for Repl.sql</FullPath>
+        </FileNode>
+        <FileNode Name="1 - Resynch Login.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:sql2008-eol:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>sql2008-eol</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>1 - Resynch Login.sql</FullPath>
+        </FileNode>
+        <FileNode Name="2 - Create Stack AzureSQLDB.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:pankajtsp.database.windows.net:False:pankaj79</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>pankajtsp.database.windows.net</AssociatedConnSrvName>
+          <AssociatedConnUserName>pankaj79</AssociatedConnUserName>
+          <FullPath>2 - Create Stack AzureSQLDB.sql</FullPath>
+        </FileNode>
+        <FileNode Name="3.1 - Prep Database for DMS.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:pankajtsp.database.windows.net:False:pankaj79</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>pankajtsp.database.windows.net</AssociatedConnSrvName>
+          <AssociatedConnUserName>pankaj79</AssociatedConnUserName>
+          <FullPath>3.1 - Prep Database for DMS.sql</FullPath>
+        </FileNode>
+        <FileNode Name="3.2 - DMS Incremental Changes.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:pankajtsp.database.windows.net:False:pankaj79</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>pankajtsp.database.windows.net</AssociatedConnSrvName>
+          <AssociatedConnUserName>pankaj79</AssociatedConnUserName>
+          <FullPath>3.2 - DMS Incremental Changes.sql</FullPath>
+        </FileNode>
+        <FileNode Name="4 - Drop all Tables.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:pankajtsp.database.windows.net:False:pankaj79</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>pankajtsp.database.windows.net</AssociatedConnSrvName>
+          <AssociatedConnUserName>pankaj79</AssociatedConnUserName>
+          <FullPath>4 - Drop all Tables.sql</FullPath>
+        </FileNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="Miscellaneous" Type="3" Sorted="true">
+      <Items />
+    </LogicalFolder>
+  </Items>
+</SqlWorkbenchSqlProject>

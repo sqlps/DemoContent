@@ -1,0 +1,16 @@
+Dynamic Data Masking
+
+Enable Dynamic Data Masking
+•Navigate to the /patients page
+•Connect to your deployed database using SSMS: Instructions
+•Open Enable-DDM.sql (Find it here) 
+•Execute the commands
+•Observe the changes in results returned on the /visits page
+
+How did that work?
+
+Dynamic data masking limits sensitive data exposure by masking the data according to policies defined on the database level while the data in the database remains unchanged; this is based on the database user's permissions. Those with the  UNMASK  permission will have the ability to see the data without masks. In our case, the application's database login did not have the  UNMASK  permission and saw the data as masked. For your administrator login, the data was visible, as the user had the UNMASK permission. For more information on Dynamic Data Masking, see the documentation. 
+
+Application Notes
+
+The code included in this sample is only intended to provide a simple demo platform for users to enable and gain experience with SQL Server 2016 security features; the demo web app is not intended to hold sensitive data and should not be used as a reference for applications that use or store sensitive data. Please take adequate steps to securely develop your application and store your data. 

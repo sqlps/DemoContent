@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<SqlWorkbenchSqlProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="DBA OverView">
+  <Items>
+    <LogicalFolder Name="Connections" Type="2" Sorted="true">
+      <Items>
+        <ConnectionNode Name="(local):PankajTSP\pankaj79">
+          <Created>2015-01-26T09:23:39.3253245-05:00</Created>
+          <Type>SQL</Type>
+          <Server>(local)</Server>
+          <UserName />
+          <Authentication>Windows Authentication</Authentication>
+          <InitialDB />
+          <LoginTimeout>15</LoginTimeout>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName>Microsoft SQL Server Management Studio - Query</ApplicationName>
+        </ConnectionNode>
+        <ConnectionNode Name="sql2014-sql-3yo5q414.cloudapp.net,2866:sa">
+          <Created>2014-11-14T16:25:04.3477506-05:00</Created>
+          <Type>SQL</Type>
+          <Server>sql2014-sql-3yo5q414.cloudapp.net,2866</Server>
+          <UserName>sa</UserName>
+          <Authentication>SQL</Authentication>
+          <InitialDB />
+          <LoginTimeout>15</LoginTimeout>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName>Microsoft SQL Server Management Studio - Query</ApplicationName>
+        </ConnectionNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="Queries" Type="0" Sorted="true">
+      <Items>
+        <FileNode Name="1. Create In memory DB.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:(local):True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>(local)</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>1. Create In memory DB.sql</FullPath>
+        </FileNode>
+        <FileNode Name="2. Create a Table.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:(local):True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>(local)</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>2. Create a Table.sql</FullPath>
+        </FileNode>
+        <FileNode Name="2.1 Create Procs 2.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:(local):True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>(local)</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>2.1 Create Procs 2.sql</FullPath>
+        </FileNode>
+        <FileNode Name="2.2 Load Some Data 2.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:sql2014-sql-3yo5q414.cloudapp.net,2866:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>sql2014-sql-3yo5q414.cloudapp.net,2866</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>2.2 Load Some Data 2.sql</FullPath>
+        </FileNode>
+        <FileNode Name="2.3 Create Table in Regular DB.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:(local):True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>(local)</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>2.3 Create Table in Regular DB.sql</FullPath>
+        </FileNode>
+        <FileNode Name="3. Create Sequence.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:sql2014-sql-3yo5q414.cloudapp.net,2866:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>sql2014-sql-3yo5q414.cloudapp.net,2866</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>3. Create Sequence.sql</FullPath>
+        </FileNode>
+        <FileNode Name="4. Bind to RG Pool.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:sql2014-sql-3yo5q414.cloudapp.net,2866:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>sql2014-sql-3yo5q414.cloudapp.net,2866</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>4. Bind to RG Pool.sql</FullPath>
+        </FileNode>
+        <FileNode Name="5. Cleanup.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:sql2014-sql-3yo5q414.cloudapp.net,2866:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>sql2014-sql-3yo5q414.cloudapp.net,2866</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>5. Cleanup.sql</FullPath>
+        </FileNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="Miscellaneous" Type="3" Sorted="true">
+      <Items />
+    </LogicalFolder>
+  </Items>
+</SqlWorkbenchSqlProject>

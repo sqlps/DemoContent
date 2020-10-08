@@ -1,0 +1,27 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+@{
+        var sqlDB = new System.Data.SqlClient.SqlConnectionStringBuilder(
+        System.Configuration.ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString);
+        var dbName = sqlDB.InitialCatalog;
+        var serverName = sqlDB.DataSource;
+        var alwaysEncryptedEnabled = sqlDB.ColumnEncryptionSetting;
+
+        
+
+
+
+    }
+<div >
+    <img src= "@Url.Content("~/content/Images/ContosoFinanceLogo.png")" height="225" width="1086" alt="IMAGES" />
+</div>
+
+<ServerInfo>
+    <strong>Server Name:  </strong>@serverName  <br />
+    <strong>DB Name: </strong>@dbName<br />
+    <strong>Always Encrypted: </strong> @alwaysEncryptedEnabled <br />
+    <strong>SQL Version: </strong> @ViewBag.SQLServerVersion <br />
+    <strong>SQL Engine Edition: </strong> @ViewBag.SQLEngineEdition
+</ServerInfo>

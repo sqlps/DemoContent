@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2006
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "SSIS-LiftAndShift", "SSIS-LiftAndShift.dtproj", "{DA9AD0BB-4942-4143-A15C-E06FF5B3B80E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DA9AD0BB-4942-4143-A15C-E06FF5B3B80E}.Development|Default.ActiveCfg = Development
+		{DA9AD0BB-4942-4143-A15C-E06FF5B3B80E}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EB9E2075-544F-460D-BA22-4CB539B11AE2}
+	EndGlobalSection
+EndGlobal

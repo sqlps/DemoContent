@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Name</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Carlos Alvarez - Alvarez.is">
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/bootstrap")
+    <script src="~/signalr/hubs"></script>
+    @*@Scripts.Render("~/bundles/notyjavascripts")*@
+    <style type="text/css">
+        body {
+            padding-top: 60px;
+        }
+
+        /* Tab Navigation */
+        .nav-tabs > li > a {
+            background: #4f4f4f;
+            border-radius: 0;
+            box-shadow: inset 0 -8px 7px -9px #4f4f4f,-2px -2px 5px -2px #4f4f4f;
+        }
+
+        .nav-tabs > li.active > a,
+        .nav-tabs > li.active > a:hover {
+            background: #fff;
+            box-shadow: inset 0 0 0 0 #808080,-2px -3px 5px -2px #808080;
+        }
+    </style>
+</head>
+<body>
+    <!-- NAVIGATION MENU -->
+    <div class="navbar-nav navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/Home/about"><img src="~/images/logo.png" alt="" style="display:inline;width: 120px;height: 40px;" />&nbsp;&nbsp;@ViewBag.Name</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav" id="mainmenu">
+                    <li id="menu-dashboard"><a href="/"><i class="icon-home icon-white"></i> Dashboard</a></li>
+                    <li id="menu-columnstore"><a href="/Home/columnstore"><i class="icon-th icon-white"></i> Reports</a></li>
+                    <li id="menu-realtimeanalytics"><a href="/Home/realtimeanalytics/1"><i class="icon-lock icon-white"></i> Real-Time Analytics</a></li>
+                    <li id="menu-settings"><a href="/AppConfig/settings"><i class="icon-lock icon-white"></i> Settings</a></li>
+                </ul>
+                <ul class="nav navbar-nav" style="float: right;margin-top:10px" id="inmemorybuttons">
+                    <li class="pull-right">
+                        <button id="diskbasedsubmitquery" value="Place Orders" class="btn btn-lg btn-primary"
+                                style="border-radius:10px;margin-bottom:10px">
+                            Place Orders
+                        </button>
+                        <button id="perfsummary" value="View Performance Summary" class="btn btn-lg btn-primary"
+                                style="border-radius:10px;margin-bottom:10px">
+                            View Performance Summary
+                        </button>
+                        <button id="getcireport" value="YOY Sales" class="btn btn-lg btn-primary"
+                                style="border-radius:10px;margin-bottom:10px">
+                            YOY Sales
+                        </button>
+                    </li>
+                </ul>
+            </div><!--/.nav-collapse -->
+        </div>
+    </div>
+        <!-- /container -->
+        @RenderBody()
+    <div id="footerwrap" style="padding:0px">
+        <footer class="clearfix"></footer>
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">
+                @*<img src="~/images/logo.png" alt="" style="display:inline;width: 120px;height: 40px;">&nbsp;&nbsp;@ViewBag.Name*@
+                </a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav"></ul>
+            </div><!--/.nav-collapse -->
+        </div>
+    </div><!-- /footerwrap -->
+</body>
+</html>

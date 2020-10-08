@@ -1,0 +1,50 @@
+﻿<div id="productPage" data-bind="with: productViewModel" style="text-align: left; clear: both;">
+    <div data-bind="slideIn: pageHasLoaded">
+    <h2 data-bind="text: name" class="product-type-header"></h2>
+    <div class="product-body">
+        <div class="product-left-column">
+            <img data-bind="attr: { src: imageUrl }" />
+        </div>
+        <div class="product-right-column">
+            <p data-bind="text: description"></p>
+        </div>
+    </div>
+    <div class="product-body">
+        <div class="product-left-column">
+            <div class="product-left-button" data-bind="click: buy, css: { 'product-left-button': !buyIsDone(), 'green-product-left-button': buyIsDone }">
+                <span class="product-price" data-bind="text: displayPrice, visible: buyIsNotTiming() && !buyIsDone()"></span>
+                <span class="product-price" data-bind="visible: buyIsDone">game purchased</span> 
+                <img data-bind="css: { 'product-price-loading': buyIsTiming, 'product-price-not-loading': buyIsNotTiming() }" src="~/Images/Loading.png" /> 
+                <span class="product-price-info" data-bind="visible: isLoggedIn() && buyIsNotTiming() && !buyIsDone()">BUY NOW</span>
+                <span class="product-price-info" data-bind="text: buyTime, visible: buyIsTiming()"></span>
+            </div>
+        </div>
+        <div class="product-right-column price-time">
+            <span class="hack-background1" data-bind="text: buyTime, visible: buyIsDone"></span>
+        </div>
+    </div>
+    
+    <div class="product-body margin-top">
+        <div class="product-time-header">other games you may like</div>
+        <div class="product-time-top" data-bind="visible: !recommendedIsTiming()"><span class="hack-background2" data-bind="text: recommendTime"></span></div>
+    </div>
+        <div data-bind="css: { 'product-body-page': productsLoaded, 'recommended-background': !productsLoaded() }" class="recommended-container">
+            <div data-bind="foreach: products" class="product-type-products">
+                <div class="product-small">
+                    <div>
+                        <img data-bind="attr: { src: imageUrl }, click: gotoPage" />
+                    </div>
+                    <div class="product-small-text">
+                        <p data-bind="text: name, click: gotoPage"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="forward-button forward-button-product-page" ><img src="~/Images/Forward.png"/></div>
+            <div class="back-button back-button-product-page" ><img src="~/Images/Back.png"/></div>
+            <div data-bind="css: { 'timer-middle': recommendedIsTiming }, visible: recommendedIsTiming">
+                <img src="~/Images/Loading.png" />
+                <div data-bind="text: recommendTime"></div>
+            </div>
+        </div>
+        </div>
+</div>

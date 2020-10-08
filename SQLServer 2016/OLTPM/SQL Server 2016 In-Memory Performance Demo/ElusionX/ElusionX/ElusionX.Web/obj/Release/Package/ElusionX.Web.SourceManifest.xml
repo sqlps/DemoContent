@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<sitemanifest>
+  <DbDacFx path="C:\Demos\SQLServer 2016\OLTPM\SQL Server 2016 In-Memory Performance Demo\ElusionX\ElusionX\ElusionX.Web\obj\Release\AutoScripts\proddbconnection_IncrementalSchemaOnly.dacpac" dacpacAction="Deploy" />
+  <DbDacFx path="C:\Demos\SQLServer 2016\OLTPM\SQL Server 2016 In-Memory Performance Demo\ElusionX\ElusionX\ElusionX.Web\obj\Release\AutoScripts\oadbconnection_IncrementalSchemaOnly.dacpac" dacpacAction="Deploy" />
+  <DbDacFx path="C:\Demos\SQLServer 2016\OLTPM\SQL Server 2016 In-Memory Performance Demo\ElusionX\ElusionX\ElusionX.Web\obj\Release\AutoScripts\dwconnection_IncrementalSchemaOnly.dacpac" dacpacAction="Deploy" />
+  <DbDacFx path="C:\Demos\SQLServer 2016\OLTPM\SQL Server 2016 In-Memory Performance Demo\ElusionX\ElusionX\ElusionX.Web\obj\Release\AutoScripts\oadbconnection_oltp_IncrementalSchemaOnly.dacpac" dacpacAction="Deploy" />
+  <DbDacFx path="C:\Demos\SQLServer 2016\OLTPM\SQL Server 2016 In-Memory Performance Demo\ElusionX\ElusionX\ElusionX.Web\obj\Release\AutoScripts\oadbconnection_rtoa_IncrementalSchemaOnly.dacpac" dacpacAction="Deploy" />
+  <IisApp path="C:\Demos\SQLServer 2016\OLTPM\SQL Server 2016 In-Memory Performance Demo\ElusionX\ElusionX\ElusionX.Web\obj\Release\Package\PackageTmp" />
+  <setAcl path="C:\Demos\SQLServer 2016\OLTPM\SQL Server 2016 In-Memory Performance Demo\ElusionX\ElusionX\ElusionX.Web\obj\Release\Package\PackageTmp" setAclResourceType="Directory" />
+  <setAcl path="C:\Demos\SQLServer 2016\OLTPM\SQL Server 2016 In-Memory Performance Demo\ElusionX\ElusionX\ElusionX.Web\obj\Release\Package\PackageTmp" setAclUser="anonymousAuthenticationUser" setAclResourceType="Directory" />
+</sitemanifest>

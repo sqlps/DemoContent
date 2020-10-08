@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# SQL Server Management Studio Solution File, Format Version 12.00
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "_Setup", "_Setup\_Setup.ssmssqlproj", "{0DF2F474-2C61-463E-B5E1-1E8EF4EE0CC3}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "DBA OverView", "DBA OverView\DBA OverView.ssmssqlproj", "{CFF58A67-B157-4BA0-BDB5-D6BC90603862}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "Query Processing", "Query Processing\Query Processing.ssmssqlproj", "{0DA7904D-8D2C-4FB6-9E2E-3D600C1960EA}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "Memory and File Management", "Memory and File Management\Memory and File Management.ssmssqlproj", "{E4BDCF70-D82D-4196-B2CD-3F005EDC205F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Default|Default = Default|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0DF2F474-2C61-463E-B5E1-1E8EF4EE0CC3}.Default|Default.ActiveCfg = Default
+		{CFF58A67-B157-4BA0-BDB5-D6BC90603862}.Default|Default.ActiveCfg = Default
+		{0DA7904D-8D2C-4FB6-9E2E-3D600C1960EA}.Default|Default.ActiveCfg = Default
+		{57607FC4-7F36-44F8-BD7F-1BDF8E6C6A35}.Default|Default.ActiveCfg = Default
+		{E4BDCF70-D82D-4196-B2CD-3F005EDC205F}.Default|Default.ActiveCfg = Default
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

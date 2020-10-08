@@ -1,0 +1,27 @@
+﻿** Warnings
+     User level transactions are not supported for memory optimized objects.  You must disable the 'Include transactional
+       scripts' deployment option to successfully deploy changes to memory optimized objects.
+
+** Highlights
+     Tables that will be rebuilt
+       [dbo].[TicketReservationDetail]
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       None
+
+** User actions
+     Drop
+       [dbo].[InsertReservationDetails] (Procedure)
+     Table rebuild
+       [dbo].[TicketReservationDetail] (Table)
+     Create
+       [dbo].[InsertReservationDetails] (Procedure)
+
+** Supporting actions
+     Refresh
+       [dbo].[Demo_Reset] (Procedure)
+       [dbo].[ReadMultipleReservations] (Procedure)
+       [dbo].[BatchInsertReservations] (Procedure)

@@ -1,0 +1,91 @@
+﻿<div class="container" id="mainContainer">
+</div>
+<div class="container" style="min-height:500px">
+    <div class="row">
+        <!--Disk based-->
+        <div class="col-sm-12 col-lg-12">
+            <div class="dash-unit" style="height:420px;text-align:left">
+                <dtitle>About</dtitle>
+                <hr />
+                <p class="lead">
+                    <b>@ViewBag.Name</b> is a popular ecommerce company. They run a multi-billion-dollar online shopping business with more than 20 million products under 50 categories with a subscriber base of 35 million.
+                </p>
+                <p>
+                    It is estimated that the GMV (Gross Merchandise Value) of the products sold on its platform is $8 billion. @ViewBag.Name currently process approximately 12 million orders per month. One can, therefore, estimate that the average order value is approximately $55.
+                </p>
+                <p>
+                    @ViewBag.Name constantly keeps offering discounts on their products and that results in extremely high volume of transactions. Sometimes the high influx is manageable, sometimes not. Occasionally, the company also runs sale offering huge discounts during seasons and festive periods. During those times, @ViewBag.Name faces appalling scalability issues resulting in direct business loss. If the average order value is $55 and assuming that a few hundred orders are missed/dropped every day during the sale period, @ViewBag.Name suffers a huge financial loss.
+                </p>
+                <p>
+                    <u>Let’s take an example:</u>
+                </p>
+                <p>
+                    Christmas sale runs from Dec 20 to Jan 5 inclusive, totaling 17 days. Average number of orders per day stands at 4,00,000 (12M/30). Out of 4,00,000 orders, one can assume that at least 10,000 orders (2.5%) might get missed due to scalability/throughput issues. This results in a total revenue loss of $5,50,000 per day, totaling to $93,50,000 for the 17 days.
+                    <br />The situation is alarming. Customer experience, too, is disappointing.<br />
+                    Due to the nature of business and high volume of transaction, @ViewBag.Name data warehouse is approximately 20 TB. Slowness of DW reporting is a common phenomenon in the company. Some reports take more than 15 minutes to execute. Furthermore, no real-time analysis can be done as it is a traditional DW deployment with nightly ETL process. Well, the inability to take the right decision at the right time can lead to a financial disaster, something that cannot be computed in monetary terms. Simply put, senior managers and executives are frustrated.
+                </p>
+            </div>
+        </div>
+        <div class="col-sm-12 col-lg-12">
+            <div class="dash-unit" style="height:480px;text-align:left">
+                <dtitle>Technical Overview</dtitle>
+                <hr />
+                <p>
+                    @ViewBag.Name maintains a cluster of servers to facilitate their massive business operation. A set of servers (Server Set A) facilitates OTLP workload and a set of servers (Server Set B) hosts the company’s data warehouse and facilitates DW reporting & analytics. Most servers are highly configured with 96 cores and 256 GB volatile memory.
+                </p>
+                <p>
+                    OLTP deployment currently runs on SQL Server 2012 EE using disk-based tables. DW deployment also runs on SQL Server 2012 EE using disk-based tables and traditional b-tree indexes.
+                </p>
+                <p>
+                    <span><u>Summary of Challenges</u></span>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Challenge</th>
+                                <th>Business Impact</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Low Scalability, Low throughput, Less TPS</td>
+                                <td>Directly results in business/revenue loss</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Slow DW reporting & analytics
+                                    No real-time analytics
+                                </td>
+                                <td>Decision making process is severely slowed down. Competition wins.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </p>
+                <p>@ViewBag.Name is facing severe performance challenges. The company is constantly adding new products to its portfolio and reaching newer markets too. The subscriber base is constantly growing. However, the current IT setup is not able to support the growing demand of the business. Scalability is the bottleneck. On another side, the company needs to constantly forecast, innovate & invest, respond to market situations and take quick and informed decisions. Unfortunately, its BI system is crawling and plagued by latency.</p>
+                <p>@ViewBag.Name already has state-of-the-art servers and there is limited scope to improve hardware. @ViewBag.Name has been suggested the following solution based on SQL Server 2016 EE.</p>
+            </div>
+        </div>
+        <div class="col-sm-12 col-lg-12">
+            <div class="dash-unit" style="height:320px;text-align:left">
+                <dtitle>Proposed SQL Server 2016 Deployment</dtitle>
+                <hr />
+                <p>
+                    @ViewBag.Name has been advised to migrate to SQL Server 2016 EE and implement some of the breakthrough capabilities offered by the database product.
+                </p>
+                <p>
+                    Key transactional tables in the OTLP database should be migrated from disk-based tables to In-Memory Tables. In-Memory Tables can offer extreme OLTP performance powered by its latch-free structure and memory-resident data. A successful implementation of In-Memory technologies can help @ViewBag.Name increase it revenue by thousands of dollars. <u>Each successful transaction is worth $55, on average. Even if 50% of 2.5% of dropped orders are processed due to an increase in transactional throughput, @ViewBag.Name’s bottom-line increases by $46,75,000.</u>A huge performance gain, a considerable financial gain and better customer experience as transactions are processed much faster.
+                </p>
+                <p>
+                    Columnstore indexes should be implemented on the data warehouse/data marts to improve query performance. Columnstore indexes can offer blazing fast performance due to its redesigned storage, compression and processing technology.
+                </p>
+                <p>
+                    SQL Server 2016 Operational Analytics can be leveraged for real-time analysis. The columnstore index on an in-memory table allows operational analytics by integrating in-memory OLTP and in-memory columnstore technologies to deliver high performance for both OLTP and analytics workloads.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#inmemorybuttons').hide();
+    });
+</script>

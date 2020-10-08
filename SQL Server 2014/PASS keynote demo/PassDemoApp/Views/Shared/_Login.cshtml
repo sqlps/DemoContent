@@ -1,0 +1,26 @@
+﻿@model MSCorp.SqlPass2013.Web.Models.LoginModel
+
+@using (Html.BeginForm("JsonLogin", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { id = "loginForm" }))
+{
+    @Html.AntiForgeryToken()
+
+    <fieldset>
+        <legend>Log in Form</legend>
+        <ol>
+            <li>
+                @Html.LabelFor(m => m.UserName)
+                @Html.TextBoxFor(m => m.UserName, new { autofocus = "autofocus", id = "loginName" })
+            </li>
+            <li>
+                @Html.LabelFor(m => m.Password)
+                @Html.PasswordFor(m => m.Password)
+            </li>
+            <li>
+                @Html.CheckBoxFor(m => m.RememberMe)
+                @Html.LabelFor(m => m.RememberMe, new { @class = "checkbox" })
+                <div style="float: right; clear: both;"><input type="submit" value="log in" /></div>
+            </li>
+        </ol>
+        @Html.ValidationSummary() 
+    </fieldset>
+}

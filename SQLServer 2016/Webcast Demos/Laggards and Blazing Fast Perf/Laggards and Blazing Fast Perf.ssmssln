@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# SQL Server Management Studio Solution File, Format Version 13.00
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "In-Memory OLTP", "In-Memory OLTP\In-Memory OLTP.ssmssqlproj", "{BAC9C36E-FB19-4C41-AF90-CCF1C16A8B39}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "QDS", "QDS\QDS.ssmssqlproj", "{07B211E6-1AD6-421B-BF1C-0813D5276A1C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Default|Default = Default|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BAC9C36E-FB19-4C41-AF90-CCF1C16A8B39}.Default|Default.ActiveCfg = Default
+		{5D235DCD-1494-48BD-8A77-CFCFA4B2427A}.Default|Default.ActiveCfg = Default
+		{07B211E6-1AD6-421B-BF1C-0813D5276A1C}.Default|Default.ActiveCfg = Default
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

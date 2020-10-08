@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<Configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ConnectionString>Data Source=SQL2014CTP2\PREPR0D;Max Pool Size=1024;Integrated Security=sspi</ConnectionString>
+  <ThreadCount>80</ThreadCount>
+  <BatchSize>10</BatchSize>
+  <seed>0</seed>
+  <dbName>Fabrikam</dbName>
+  <updateInterval>360</updateInterval>
+  <NumberOfProducts>100000</NumberOfProducts>
+  <ReadsPerWrite>1</ReadsPerWrite>
+</Configuration>

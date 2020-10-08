@@ -1,0 +1,21 @@
+USE [master]
+GO
+ALTER RESOURCE GOVERNOR with (CLASSIFIER_FUNCTION = NULL)
+GO
+ALTER RESOURCE GOVERNOR RECONFIGURE
+GO
+
+DROP FUNCTION fnUserClassifier
+GO
+
+DROP WORKLOAD GROUP User1
+go
+DROP RESOURCE POOL Customer1
+GO
+DROP LOGIN [GovernMe] 
+GO
+
+sp_configure 'max server memory', 12000
+go
+Reconfigure
+go

@@ -1,0 +1,228 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSources>
+    <DataSource Name="Adventureworks2014_AlwaysEncrypted">
+      <rd:DataSourceID>e6c16821-74a8-4c90-a5c7-45ca42a8f39b</rd:DataSourceID>
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString>Data Source=SQL2016C3-AGL;Initial Catalog=AdventureWorks2014;ApplicationIntent=ReadOnly;Column Encryption Setting=Enabled</ConnectString>
+        <IntegratedSecurity>true</IntegratedSecurity>
+      </ConnectionProperties>
+    </DataSource>
+  </DataSources>
+  <rd:ReportID>268405c6-7658-4633-b593-376161cd2d4a</rd:ReportID>
+  <Width>5in</Width>
+  <Body>
+    <Height>0.79in</Height>
+    <ColumnSpacing>0.5in</ColumnSpacing>
+    <ReportItems>
+      <Textbox Name="textbox1">
+        <Style>
+          <FontFamily>Tahoma</FontFamily>
+          <FontSize>20pt</FontSize>
+          <Color>SteelBlue</Color>
+          <FontWeight>Bold</FontWeight>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <rd:DefaultName>textbox1</rd:DefaultName>
+        <Value>Employee Overview</Value>
+        <CanGrow>true</CanGrow>
+        <Height>0.37in</Height>
+      </Textbox>
+      <Matrix Name="matrix1">
+        <Top>0.37in</Top>
+        <RowGroupings>
+          <RowGrouping>
+            <DynamicRows>
+              <Grouping Name="matrix1_Name">
+                <GroupExpressions>
+                  <GroupExpression>=Fields!Name.Value</GroupExpression>
+                </GroupExpressions>
+              </Grouping>
+              <Sorting>
+                <SortBy>
+                  <SortExpression>=Fields!Name.Value</SortExpression>
+                </SortBy>
+              </Sorting>
+              <ReportItems>
+                <Textbox Name="Name">
+                  <Style>
+                    <FontFamily>Tahoma</FontFamily>
+                    <FontSize>10pt</FontSize>
+                    <FontWeight>Bold</FontWeight>
+                    <Color>White</Color>
+                    <BackgroundColor>#6e9eca</BackgroundColor>
+                    <BorderStyle>
+                      <Default>Solid</Default>
+                    </BorderStyle>
+                    <BorderColor>
+                      <Default>LightGrey</Default>
+                    </BorderColor>
+                    <PaddingLeft>2pt</PaddingLeft>
+                    <PaddingRight>2pt</PaddingRight>
+                    <PaddingTop>2pt</PaddingTop>
+                    <PaddingBottom>2pt</PaddingBottom>
+                  </Style>
+                  <rd:DefaultName>Name</rd:DefaultName>
+                  <Value>=Fields!Name.Value</Value>
+                  <CanGrow>true</CanGrow>
+                  <Height>0.21in</Height>
+                  <Width>1in</Width>
+                </Textbox>
+              </ReportItems>
+            </DynamicRows>
+            <Width>1in</Width>
+          </RowGrouping>
+        </RowGroupings>
+        <MatrixRows>
+          <MatrixRow>
+            <MatrixCells>
+              <MatrixCell>
+                <ReportItems>
+                  <Textbox Name="textbox2">
+                    <Style>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontSize>10pt</FontSize>
+                      <BorderStyle>
+                        <Default>Solid</Default>
+                      </BorderStyle>
+                      <BorderColor>
+                        <Default>LightGrey</Default>
+                      </BorderColor>
+                      <PaddingLeft>2pt</PaddingLeft>
+                      <PaddingRight>2pt</PaddingRight>
+                      <PaddingTop>2pt</PaddingTop>
+                      <PaddingBottom>2pt</PaddingBottom>
+                    </Style>
+                    <rd:DefaultName>textbox2</rd:DefaultName>
+                    <Value>=Sum(Fields!ID__Employees.Value)</Value>
+                    <CanGrow>true</CanGrow>
+                    <Height>0.21in</Height>
+                    <Width>1in</Width>
+                  </Textbox>
+                </ReportItems>
+              </MatrixCell>
+            </MatrixCells>
+            <Height>0.21in</Height>
+          </MatrixRow>
+        </MatrixRows>
+        <Corner>
+          <ReportItems>
+            <Textbox Name="textbox3">
+              <Style>
+                <FontFamily>Tahoma</FontFamily>
+                <FontSize>10pt</FontSize>
+                <BorderStyle>
+                  <Default>Solid</Default>
+                </BorderStyle>
+                <BorderColor>
+                  <Default>LightGrey</Default>
+                </BorderColor>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+              <rd:DefaultName>textbox3</rd:DefaultName>
+              <Value>
+              </Value>
+              <CanGrow>true</CanGrow>
+              <Height>0.21in</Height>
+            </Textbox>
+          </ReportItems>
+        </Corner>
+        <DataSetName>DataSet1</DataSetName>
+        <MatrixColumns>
+          <MatrixColumn>
+            <Width>1in</Width>
+          </MatrixColumn>
+        </MatrixColumns>
+        <ColumnGroupings>
+          <ColumnGrouping>
+            <DynamicColumns>
+              <Grouping Name="matrix1_GroupName">
+                <GroupExpressions>
+                  <GroupExpression>=Fields!GroupName.Value</GroupExpression>
+                </GroupExpressions>
+              </Grouping>
+              <Sorting>
+                <SortBy>
+                  <SortExpression>=Fields!GroupName.Value</SortExpression>
+                </SortBy>
+              </Sorting>
+              <ReportItems>
+                <Textbox Name="GroupName">
+                  <Style>
+                    <FontFamily>Tahoma</FontFamily>
+                    <FontSize>10pt</FontSize>
+                    <FontWeight>Bold</FontWeight>
+                    <Color>White</Color>
+                    <BackgroundColor>#6e9eca</BackgroundColor>
+                    <BorderStyle>
+                      <Default>Solid</Default>
+                    </BorderStyle>
+                    <BorderColor>
+                      <Default>LightGrey</Default>
+                    </BorderColor>
+                    <PaddingLeft>2pt</PaddingLeft>
+                    <PaddingRight>2pt</PaddingRight>
+                    <PaddingTop>2pt</PaddingTop>
+                    <PaddingBottom>2pt</PaddingBottom>
+                  </Style>
+                  <rd:DefaultName>GroupName</rd:DefaultName>
+                  <Value>=Fields!GroupName.Value</Value>
+                  <CanGrow>true</CanGrow>
+                  <Height>0.21in</Height>
+                  <Width>1in</Width>
+                </Textbox>
+              </ReportItems>
+            </DynamicColumns>
+            <Height>0.21in</Height>
+          </ColumnGrouping>
+        </ColumnGroupings>
+      </Matrix>
+    </ReportItems>
+  </Body>
+  <Language>en-US</Language>
+  <LeftMargin>1in</LeftMargin>
+  <RightMargin>1in</RightMargin>
+  <TopMargin>1in</TopMargin>
+  <BottomMargin>1in</BottomMargin>
+  <PageWidth>8.5in</PageWidth>
+  <PageHeight>11in</PageHeight>
+  <DataSets>
+    <DataSet Name="DataSet1">
+      <Fields>
+        <Field Name="GroupName">
+          <DataField>GroupName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Name">
+          <DataField>Name</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ID__Employees">
+          <DataField># Employees</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>Adventureworks2014_AlwaysEncrypted</DataSourceName>
+        <CommandType>Text</CommandType>
+        <CommandText>Select GroupName, Name, Count(*) as '# Employees'
+from HumanResources.Department D
+Inner Join HumanResources.EmployeeDepartmentHistory EDH
+On D.DepartmentID = EDH.DepartmentID
+Inner Join employee_encrypted EE
+On EE.BusinessEntityID = EDH.BusinessEntityID
+group by D.GroupName, D.Name
+Order by 3 desc</CommandText>
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+        <Timeout>0</Timeout>
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

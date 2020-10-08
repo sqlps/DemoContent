@@ -1,0 +1,11 @@
+14.0
+9
+1       SQLCHAR             0       12      "|"        1     P_PARTKEY                      ""
+2       SQLCHAR             0       55      "|"        2     P_NAME                         SQL_Latin1_General_CP1_CI_AS
+3       SQLCHAR             0       25      "|"        3     P_MFGR                         SQL_Latin1_General_CP1_CI_AS
+4       SQLCHAR             0       10      "|"        4     P_BRAND                        SQL_Latin1_General_CP1_CI_AS
+5       SQLCHAR             0       25      "|"        5     P_TYPE                         SQL_Latin1_General_CP1_CI_AS
+6       SQLCHAR             0       12      "|"        6     P_SIZE                         ""
+7       SQLCHAR             0       10      "|"        7     P_CONTAINER                    SQL_Latin1_General_CP1_CI_AS
+8       SQLCHAR             0       41      "|"        8     P_RETAILPRICE                  ""
+9       SQLCHAR             0       23      "|\r\n"    9     P_COMMENT                      SQL_Latin1_General_CP1_CI_AS

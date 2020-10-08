@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F14B399A-7131-4C87-9E4B-1186C45EF12D}") = "Operational Analytics", "Operational Analytics\Operational Analytics.rptproj", "{EC2CBD17-AD04-4911-9913-72977A520916}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		DebugLocal|Default = DebugLocal|Default
+		Release|Default = Release|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EC2CBD17-AD04-4911-9913-72977A520916}.Debug|Default.ActiveCfg = Debug
+		{EC2CBD17-AD04-4911-9913-72977A520916}.Debug|Default.Build.0 = Debug
+		{EC2CBD17-AD04-4911-9913-72977A520916}.Debug|Default.Deploy.0 = Debug
+		{EC2CBD17-AD04-4911-9913-72977A520916}.DebugLocal|Default.ActiveCfg = DebugLocal
+		{EC2CBD17-AD04-4911-9913-72977A520916}.DebugLocal|Default.Build.0 = DebugLocal
+		{EC2CBD17-AD04-4911-9913-72977A520916}.Release|Default.ActiveCfg = Release
+		{EC2CBD17-AD04-4911-9913-72977A520916}.Release|Default.Build.0 = Release
+		{EC2CBD17-AD04-4911-9913-72977A520916}.Release|Default.Deploy.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

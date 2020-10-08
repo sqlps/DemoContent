@@ -1,0 +1,10 @@
+14.0
+8
+1       SQLCHAR             0       12      "|"        1     C_CUSTKEY                    ""
+2       SQLCHAR             0       25      "|"        2     C_NAME                       SQL_Latin1_General_CP1_CI_AS
+3       SQLCHAR             0       40      "|"        3     C_ADDRESS                    SQL_Latin1_General_CP1_CI_AS
+4       SQLCHAR             0       12      "|"        4     C_NATIONKEY                  ""
+5       SQLCHAR             0       15      "|"        5     C_PHONE                      SQL_Latin1_General_CP1_CI_AS
+6       SQLCHAR             0       41      "|"        6     C_ACCTBAL                    ""
+7       SQLCHAR             0       10      "|"        7     C_MKTSEGMENT                 SQL_Latin1_General_CP1_CI_AS
+8       SQLCHAR             0       117     "|\r\n"    8     C_COMMENT                    SQL_Latin1_General_CP1_CI_AS

@@ -1,0 +1,148 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="086a5661-ad3f-4359-9cb1-bc9fb35b437b" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Dim Account</ID>
+  <Name>Account</Name>
+  <CreatedTimestamp>0001-01-01T08:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T08:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T08:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Type>Accounts</Type>
+  <ErrorConfiguration dwd:design-time-name="e2f63981-4ba2-4472-8b02-24a497666772">
+    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="9a9e83b9-cc35-4655-8235-02b3e36c0e7a">
+      <ID>Parent Account Key</ID>
+      <Name>Accounts</Name>
+      <Type>Account</Type>
+      <Usage>Parent</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="30318614-3125-456b-ad7e-62b7a8ac7dd7">
+          <DataType>Integer</DataType>
+          <DataSize>-1</DataSize>
+        </KeyColumn>
+      </KeyColumns>
+      <DefaultMember>[Account].[Accounts].[Account Level 01].&amp;[47]</DefaultMember>
+      <NamingTemplate>Account Level *;</NamingTemplate>
+      <MembersWithData>NonLeafDataHidden</MembersWithData>
+      <CustomRollupColumn dwd:design-time-name="65f7c253-8efe-4b08-a58f-920dc1f0f9e4">
+        <DataType>WChar</DataType>
+        <DataSize>300</DataSize>
+      </CustomRollupColumn>
+      <UnaryOperatorColumn dwd:design-time-name="261a1a31-2f54-4a5c-a84a-53bd1dabf86c">
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="84e464b8-7d76-4ff5-b6e8-69bfa7ab52cd">
+          <TableID>dbo_DimAccount</TableID>
+          <ColumnID>Operator</ColumnID>
+        </Source>
+      </UnaryOperatorColumn>
+      <IsAggregatable>false</IsAggregatable>
+      <InstanceSelection>DropDown</InstanceSelection>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="f0767388-e78e-46e3-83e3-2aa6bb95db84">
+      <ID>Account Description</ID>
+      <Name>Account</Name>
+      <Type>AccountName</Type>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="fa932675-9ac6-4044-af0f-47c6d851239c">
+          <DataType>Integer</DataType>
+          <DataSize>-1</DataSize>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="60c5a437-aead-47e3-aeaf-b6aaf3793686">
+        <DataType>WChar</DataType>
+        <DataSize>50</DataSize>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="b822c1ab-c659-4bbb-8bc3-617f0019f481">
+          <AttributeID>Parent Account Key</AttributeID>
+          <Name>Accounts</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="7da8cd9b-6ecc-45db-b323-5722fc7f1267">
+          <AttributeID>Account Type</AttributeID>
+          <Name>Account Type</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="f1d73dac-0001-4d8b-a27e-08056d2c0a27">
+          <AttributeID>AccountKey</AttributeID>
+          <Name>Account Number</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>AttributeKey</OrderBy>
+      <OrderByAttributeID>AccountKey</OrderByAttributeID>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <InstanceSelection>DropDown</InstanceSelection>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="3001ce3b-c120-4a7d-9672-9b85b138aa57">
+      <ID>Account Type</ID>
+      <Name>Account Type</Name>
+      <Type>AccountType</Type>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="b00edac9-a287-47ea-a5cf-d9b79b999720">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+        </KeyColumn>
+      </KeyColumns>
+      <InstanceSelection>DropDown</InstanceSelection>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="f8400e2b-e483-4bc9-9aa7-87dd6eb34c9e">
+      <ID>AccountKey</ID>
+      <Name>Account Number</Name>
+      <Type>AccountNumber</Type>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="85dc7bed-8c2c-46c1-9661-cde8a75531a1">
+          <DataType>Integer</DataType>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <InstanceSelection>DropDown</InstanceSelection>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <AttributeAllMemberName>All Accounts</AttributeAllMemberName>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>

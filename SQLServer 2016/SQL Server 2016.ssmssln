@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# SQL Server Management Studio Solution File, Format Version 14.00
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "1. Prep Steps", "1. Prep Steps\1. Prep Steps.ssmssqlproj", "{19FBCD06-CA96-4B05-A65D-4772708BD1F1}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "2. Performance", "2. Performance\2. Performance.ssmssqlproj", "{6E7E3D06-D45E-4BCA-AA12-1C3C7F316DC3}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "3. Security", "3. Security\3. Security.ssmssqlproj", "{496D87D0-30BE-443E-8F7D-BB8A39A4FBB5}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "4. Analytics", "4. Analytics\4. Analytics.ssmssqlproj", "{D648C506-73DF-459A-B2E7-924503E811BD}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "5. Admin and Hybrid Cloud", "5. Admin and Hybrid Cloud\5. Admin and Hybrid Cloud.ssmssqlproj", "{7A1115D9-AEA0-42AE-9456-01B696A4181C}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "0. Cleanup", "0. Cleanup\0. Cleanup.ssmssqlproj", "{66B694CE-C2EA-49F2-9C87-D05A1B663A52}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "6. WideWorldImporters", "6. WideWorldImporters\6. WideWorldImporters.ssmssqlproj", "{E0B0DC8D-EF57-4502-9C91-6570A4C3E486}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "SQL 2017", "..\SQL Server 2017\SQL 2017\SQL 2017.ssmssqlproj", "{6712FCFF-2390-4B2C-BFBD-C25258FD976E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Default|Default = Default|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{19FBCD06-CA96-4B05-A65D-4772708BD1F1}.Default|Default.ActiveCfg = Default
+		{6E7E3D06-D45E-4BCA-AA12-1C3C7F316DC3}.Default|Default.ActiveCfg = Default
+		{496D87D0-30BE-443E-8F7D-BB8A39A4FBB5}.Default|Default.ActiveCfg = Default
+		{D648C506-73DF-459A-B2E7-924503E811BD}.Default|Default.ActiveCfg = Default
+		{7A1115D9-AEA0-42AE-9456-01B696A4181C}.Default|Default.ActiveCfg = Default
+		{66B694CE-C2EA-49F2-9C87-D05A1B663A52}.Default|Default.ActiveCfg = Default
+		{E0B0DC8D-EF57-4502-9C91-6570A4C3E486}.Default|Default.ActiveCfg = Default
+		{6712FCFF-2390-4B2C-BFBD-C25258FD976E}.Default|Default.ActiveCfg = Default
+		{69C6D35D-B627-4E0F-A149-29A5F364BBF2}.Default|Default.ActiveCfg = Default
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

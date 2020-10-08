@@ -1,0 +1,6 @@
+14.0
+4
+1       SQLCHAR             0       12      "|"        1     N_NATIONKEY                ""
+2       SQLCHAR             0       25      "|"        2     N_NAME                     SQL_Latin1_General_CP1_CI_AS
+3       SQLCHAR             0       12      "|"        3     N_REGIONKEY                ""
+4       SQLCHAR             0       152     "|\r\n"    4     N_COMMENT                  SQL_Latin1_General_CP1_CI_AS

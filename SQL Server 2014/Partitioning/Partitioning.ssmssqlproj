@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<SqlWorkbenchSqlProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="Partitioning">
+  <Items>
+    <LogicalFolder Name="Connections" Type="2" Sorted="true">
+      <Items>
+        <ConnectionNode Name="(local):PankajTSP\pankaj79">
+          <Created>2015-03-12T01:14:38.1985436-04:00</Created>
+          <Type>SQL</Type>
+          <Server>(local)</Server>
+          <UserName />
+          <Authentication>Windows Authentication</Authentication>
+          <InitialDB>AdventureWorksDW2008Big</InitialDB>
+          <LoginTimeout>15</LoginTimeout>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName>Microsoft SQL Server Management Studio - Query</ApplicationName>
+        </ConnectionNode>
+        <ConnectionNode Name="SQL2014-SQL1:PankajTSP\pankaj79">
+          <Created>2015-03-11T21:57:16.7838513-04:00</Created>
+          <Type>SQL</Type>
+          <Server>SQL2014-SQL1</Server>
+          <UserName />
+          <Authentication>Windows Authentication</Authentication>
+          <InitialDB />
+          <LoginTimeout>15</LoginTimeout>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName>Microsoft SQL Server Management Studio - Query</ApplicationName>
+        </ConnectionNode>
+        <ConnectionNode Name="zbqfsz8os9.database.secure.windows.net:pankaj79">
+          <Created>2015-03-11T21:22:57.5670529-04:00</Created>
+          <Type>SQL</Type>
+          <Server>zbqfsz8os9.database.secure.windows.net</Server>
+          <UserName>pankaj79</UserName>
+          <Authentication>SQL</Authentication>
+          <InitialDB />
+          <LoginTimeout>15</LoginTimeout>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName>Microsoft SQL Server Management Studio - Query</ApplicationName>
+        </ConnectionNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="Queries" Type="0" Sorted="true">
+      <Items>
+        <FileNode Name="_Cleanup.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:SQL2014-SQL1:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>SQL2014-SQL1</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>_Cleanup.sql</FullPath>
+        </FileNode>
+        <FileNode Name="0 - Setup.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:SQL2014-SQL1:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>SQL2014-SQL1</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>0 - Setup.sql</FullPath>
+        </FileNode>
+        <FileNode Name="1 - DMVs and DMFs.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:SQL2014-SQL1:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>SQL2014-SQL1</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>1 - DMVs and DMFs.sql</FullPath>
+        </FileNode>
+        <FileNode Name="2 - Partition Elimination.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:SQL2014-SQL1:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>SQL2014-SQL1</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>2 - Partition Elimination.sql</FullPath>
+        </FileNode>
+        <FileNode Name="3 - Partitioned Views.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:(local):True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>(local)</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>3 - Partitioned Views.sql</FullPath>
+        </FileNode>
+        <FileNode Name="4 - Oops Forgot to create an Empty Partition.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:(local):True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>(local)</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>4 - Oops Forgot to create an Empty Partition.sql</FullPath>
+        </FileNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="Miscellaneous" Type="3" Sorted="true">
+      <Items />
+    </LogicalFolder>
+  </Items>
+</SqlWorkbenchSqlProject>

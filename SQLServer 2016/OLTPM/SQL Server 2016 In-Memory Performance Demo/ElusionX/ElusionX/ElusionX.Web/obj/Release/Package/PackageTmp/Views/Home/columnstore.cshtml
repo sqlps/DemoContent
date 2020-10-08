@@ -1,0 +1,106 @@
+﻿<div class="container" id="mainContainerCS" style="min-height:690px;background: url('../../images/map.jpg');width:100%;margin-top:-10px">
+    <div class="row" style="margin-top:30px">
+        <!--Non Column Store-->
+        <div class="col-sm-6 col-lg-6 cont">
+            <div class="half-unit" style="height:500px">
+                <div class="row">
+                    <span class="graph-title">Reporting On Row-Store Data</span>
+                </div>
+                <div id="row">
+                    <div class="clockcenter text">
+                        <digiclockci>00:00:00</digiclockci>
+                    </div>
+                    <div class="chart-wrapper" style="height:400px">
+                        <div id="cireport" style="height:100%;width:100%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-lg-6 cont">
+            <div class="half-unit" style="height:500px">
+                <span class="graph-title">Reporting On Columnstore Data</span>
+                <div id="row">
+                    <div class="clockcenter text">
+                        <digiclockcs>00:00:00</digiclockcs><p id="p-csperf" style="font-size:30px;display:inline">
+                            <span class="glyphicon glyphicon-upload"></span>
+                            <span id="columnstore-impr"></span>
+                        </p>
+                    </div>
+                </div>
+                <div class="chart-wrapper" style="height:400px">
+                    <div id="csreport" style="height:100%;width:100%"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6 col-lg-6 cont">
+            <div class="half-unit" style="height:120px">
+                <div class="row">
+                    <div id="csrowscount" class="value"></div>
+                    <div class="desc">Row Count</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-lg-6 cont">
+            <div class="half-unit" style="height:120px">
+                <div class="row">
+                    <div id="cirowscount" class="value"></div>
+                    <div class="desc">Row Count</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="panel-group" id="accordion">
+        <div class="panel panel-default" id="panel2">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-target="#showquery"
+                       href="#showquery" class="collapsed">
+                        Show Query
+                    </a>
+                </h4>
+            </div>
+            <div id="showquery" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <div class="row" style="margin-top:10px;margin-bottom:10px;padding:5px">
+                        <div class="col-sm-6 col-lg-6 cont" style="height:350px">
+                            <div class="half-unit" style="margin-bottom:10px;height:350px">
+                                <div class="row">
+                                    <div class="col-sm-12 col-lg-12 cont">
+                                        <div class="desc">Query on Row-Store Data</div>
+                                        <p class="query">SELECT DATEPART(YEAR, o.OrderDate) AS OrderYear,SUM(OrderPrice - (o.OrderQuantity * (p.ProductPurchasePrice + o.OrderTax))) AS SaleProfit FROM ordersDW o INNER JOIN DimProducts p ON o.ProductID = p.ProductID INNER JOIN DimCategories c ON o.CategoryID = c.CategoryID INNER JOIN DimManufacturers m ON o.ManufacturerID = m.ManufacturerID GROUP BY DATEPART(YEAR, o.OrderDate) ORDER BY DATEPART(YEAR, o.OrderDate)</p>
+                                    </div>
+                                </div>
+                                <div class="row" style="margin-top:15px">
+                                    <div class="col-sm-12 col-lg-12 cont">
+                                        <div class="desc">On Row-Store Drill Down</div>
+                                        <p class="query">SELECT DATEPART(MONTH, o.OrderDate) AS OrderMonth, SUM(OrderPrice - (o.OrderQuantity * (p.ProductPurchasePrice + o.OrderTax))) AS SaleProfit FROM ordersDW o INNER JOIN DimProducts p ON o.ProductID = p.ProductID INNER JOIN DimCategories c ON o.CategoryID = c.CategoryID INNER JOIN DimManufacturers m ON o.ManufacturerID = m.ManufacturerID Where DATEPART(YEAR, o.OrderDate) = {SelectedYear} GROUP BY DATEPART(MONTH, o.OrderDate) ORDER BY DATEPART(MONTH, o.OrderDate)</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-6 cont" style="height:350px">
+                            <div class="half-unit" style="margin-bottom:10px;height:350px">
+                                <div class="row">
+                                    <div class="col-sm-12 col-lg-12 cont">
+                                        <div class="desc">Query on Columnstore Data</div>
+                                        <p class="query">SELECT DATEPART(YEAR, o.OrderDate) AS OrderYear, SUM(OrderPrice - (o.OrderQuantity * (p.ProductPurchasePrice + o.OrderTax))) AS SaleProfit FROM ordersDW_CS o INNER JOIN DimProducts p ON o.ProductID = p.ProductID INNER JOIN DimCategories c ON o.CategoryID = c.CategoryID INNER JOIN DimManufacturers m ON o.ManufacturerID = m.ManufacturerID GROUP BY DATEPART(YEAR, o.OrderDate) ORDER BY DATEPART(YEAR, o.OrderDate)</p>
+                                    </div>
+                                </div>
+                                <div class="row" style="margin-top:15px">
+                                    <div class="col-sm-12 col-lg-12 cont">
+                                        <div class="desc">On Columnstore Drill Down</div>
+                                        <p class="query">SELECT DATEPART(MONTH, o.OrderDate) AS OrderMonth, SUM(OrderPrice - (o.OrderQuantity * (p.ProductPurchasePrice + o.OrderTax))) AS SaleProfit FROM ordersDW_CS o INNER JOIN DimProducts p ON o.ProductID = p.ProductID INNER JOIN DimCategories c ON o.CategoryID = c.CategoryID INNER JOIN DimManufacturers m ON o.ManufacturerID = m.ManufacturerID Where DATEPART(YEAR, o.OrderDate) = {SelectedYear} GROUP BY DATEPART(MONTH, o.OrderDate) ORDER BY DATEPART(MONTH, o.OrderDate)</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@Scripts.Render("~/bundles/columnstorejavascripts")

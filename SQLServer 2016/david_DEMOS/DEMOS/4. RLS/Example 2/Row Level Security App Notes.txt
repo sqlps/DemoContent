@@ -1,0 +1,26 @@
+Row Level Security (RLS)
+
+Login to the application
+
+Sign in using (Rachel@contoso.com/Password1!) or (alice@contoso.com/Password1!)
+
+Enable Row Level Security (RLS)
+•Connect to your database using SSMS: Instructions
+•Open Enable-RLS.sql (Find it here: C:\Users\dpless\Desktop\DEMOS\0. Solution\sql-server-samples-master\samples\features\security\contoso-clinic\tsql-scripts)
+•Execute the commands 
+•Observe the changes to the results returned on the /visits or /patients page
+
+How did that work?
+
+The application leverages an Entity Framework feature called interceptors
+
+Specifically, we used a  DbConnectionInterceptor . The  Opened()  function is called whenever Entity Framework opens a connection and we set SESSION_CONTEXT with the current application  UserId  there. 
+
+Predicate functions
+
+The predicate functions we created in Enable-RLS.sql identify users by the  UserId  which was set by our interceptor whenever a connection is established from the application. The two types of predicates we created were Filter and Block. 
+•Filter predicates silently filter  SELECT ,  UPDATE , and  DELETE  operations to exclude rows that do not satisfy the predicate. 
+•Block predicates explicitly block (throw errors) on  INSERT ,  UPDATE , and  DELETE  operations that do not satisfy the predicate. 
+
+Reference:
+https://github.com/DRediske/sql-server-samples/tree/master/samples/features/security/contoso-clinic

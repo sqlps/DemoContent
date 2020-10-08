@@ -1,0 +1,193 @@
+﻿@model ElusionX.Web.DataModel.ApplicationConfiguration
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="container" style="min-height:500px">
+    <ul class="nav nav-tabs" role="tablist" id="settings-tabsheader">
+        <li id="liappsettings"><a href="#appsettings" role="tab" data-toggle="tab"> Dashboard</a></li>
+        <li><a href="#realtimesettings" role="tab" data-toggle="tab"> Real-Time Analytics</a></li>
+        <li><a href="#extras" role="tab" data-toggle="tab"> Extras</a></li>
+    </ul>
+    <div class="tab-content" style="margin-top:-25px;min-height:630px">
+        <div class="tab-pane fade active in" id="appsettings" style="margin-top:70px">
+            @using (Html.BeginForm("Settings", "AppConfig", FormMethod.Post, new { enctype = "multipart/form-data" }))
+            {
+                @Html.AntiForgeryToken()
+                <div>
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    @Html.HiddenFor(model => model.ApplicationConfigurationID)
+                    <div class="row">
+                        <label id="label-name" class="control-label col-md-3" for="Name">Application Name</label>
+                        <div class="row">
+                            @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control", @style = "background:#fff;height;26px;font-size:14pxdisplay:inline-block;padding:4px6px;margin-bottom:9px;line-height:20px;color:#9e9d9d;"  } })
+                            @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="row">
+                        <label id="label-mincommandtimeout" class="control-label col-md-3" for="Min Command Time Out">Min Command Timeout</label>
+                        <div class="row">
+                            @Html.EditorFor(model => model.MinCommandTimeOut, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.MinCommandTimeOut, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="row">
+                        <label id="label-maxcommandtimeout" class="control-label col-md-3" for="MaxCommandTimeOut">Max Command Timeout</label>
+                        <div class="row">
+                            @Html.EditorFor(model => model.MaxCommandTimeOut, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.MaxCommandTimeOut, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <label id="label-numberoforders" class="control-label col-md-3" for="NumberOfOrders">Number Of Orders</label>
+                        <div class="row">
+                            @Html.EditorFor(model => model.NumberOfOrders, new { htmlAttributes = new { @class = "form-control", @min = 0, @max = 300 } })
+                            @Html.ValidationMessageFor(model => model.NumberOfOrders, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <label id="label-numberofusers" class="control-label col-md-3" for="NumberOfUsers">Number Of Users</label>
+                        <div class="row">
+                            @Html.EditorFor(model => model.NumberOfUsers, new { htmlAttributes = new { @class = "form-control", @min = 0, @max = 1200 } })
+                            @Html.ValidationMessageFor(model => model.NumberOfUsers, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="row">
+                        <label id="label-logo" class="control-label col-md-3" for="file">Application Logo</label>
+                        <div class="row">
+                            <input type="file" class="form-control" id="file" name="file" />
+                        </div>
+                    </div>
+                    <div class="row">
+                            <input type="submit" value="Save" class="btn-lg btn-success" style="color: #fff;background-color: #5cb85c;border-color: #4cae4c;padding: 10px 16px;font-size: 18px;line-height: 1.3333333;border-radius: 6px;" />
+                    </div>
+                </div>
+            }
+        </div>
+        <div id="realtimesettings" class="tab-pane fade" style="margin-top:70px">
+            <div class="form-group">
+                <div class="row">
+                    <label class="control-label col-md-3">Number of Users</label>
+                    <input type="number" id="rtoa-numberofusers" class="form-control col-md-6" />
+                </div>
+                <div class="row">
+                    <label class="control-label col-md-3">Iterations</label>
+                    <input type="number" id="rtoa-iterations" class="form-control col-md-6" />
+                </div>
+                <div class="row">
+                    <label class="control-label col-md-3">Number of Orders per User</label>
+                    <input type="number" id="rtoa-ordersperuser" class="form-control col-md-6" />
+                </div>
+                <div class="row">
+                    <label class="control-label col-md-3">Number of YOY Iterations</label>
+                    <input type="number" id="rtoa-yoyiterations" class="form-control col-md-6" />
+                </div>
+                <div class="row">
+                    <button type="button" class="btn-lg btn-success pull-left" id="btnsavertoasettings">Save</button>
+                </div>
+            </div>
+        </div>
+        <div id="extras" class="tab-pane fade" style="margin-top:70px">
+            <div class="form-group">
+                <div class="row">
+                    <button type="button" id="extras-dropcleanbuffers" class="btn-lg btn-success" style="margin-right:10px">Drop Clean Buffers</button>
+                    <button type="button" id="extras-freeproccache" class="btn-lg btn-success">Free Proc Cache</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#mainmenu li#menu-settings').toggleClass('active');
+        $('#inmemorybuttons').hide();
+        $('#ra-loading').hide();
+        $('#liappsettings').addClass('active');
+        $('#btnsavertoasettings').on('click', function () {
+            $('#btnsavertoasettings').text("Saving....");
+            SaveRTOASettings();
+        });
+        $('#extras-dropcleanbuffers').on('click', function () {
+            $('#extras-dropcleanbuffers').text("Running....");
+            DropCleanBuffers();
+        });
+        $('#extras-freeproccache').on('click', function () {
+            $('#extras-freeproccache').text("Running....");
+            FreeProcCache();
+        });
+        GetRTOASettings();
+    });
+
+    function SaveRTOASettings() {
+        var numberOfUsers = $('#rtoa-numberofusers').val();
+        var iterations = $('#rtoa-iterations').val();
+        var ordersperuser = $('#rtoa-ordersperuser').val();
+        var yoyiterations = $('#rtoa-yoyiterations').val();
+        $.ajax({
+            url: "/appconfig/savertoasettings",
+            contentType: 'application/json; charset=utf-8',
+            data: JSON.stringify({ numberOfUsers: numberOfUsers, iterations: iterations, ordersperuser: ordersperuser, yoyiterations: yoyiterations }),
+            type: "POST",
+            success: function (result) {
+                $('#btnsavertoasettings').text("Save");
+                if (result.data) {
+                    $('#rtoa-numberofusers').val(result.data.NumberOfUsers);
+                    $('#rtoa-iterations').val(result.data.Iterations);
+                    $('#rtoa-ordersperuser').val(result.data.NumberOfOrders);
+                    $('#rtoa-yoyiterations').val(result.data.MinCommandTimeOut);
+                }
+            },
+            error: function () { }
+        });
+    }
+
+    function GetRTOASettings() {
+        $.ajax({
+            url: "/appconfig/getrtoasettings",
+            contentType: 'application/json; charset=utf-8',
+            cache: false,
+            type: "GET",
+            success: function (result) {
+                if (result.data) {
+                    $('#rtoa-numberofusers').val(result.data.NumberOfUsers);
+                    $('#rtoa-iterations').val(result.data.Iterations);
+                    $('#rtoa-ordersperuser').val(result.data.NumberOfOrders);
+                    $('#rtoa-yoyiterations').val(result.data.MinCommandTimeOut);
+                }
+            },
+            error: function () { }
+        });
+    }
+
+    function DropCleanBuffers() {
+        $.ajax({
+            url: "/appconfig/dropcleanbuffers",
+            contentType: 'application/json; charset=utf-8',
+            cache: false,
+            type: "GET",
+            success: function (result) {
+                if (result.data) {
+                    $('#extras-dropcleanbuffers').text("Drop Clean Buffers");
+                }
+            },
+            error: function () { }
+        });
+    }
+
+    function FreeProcCache() {
+        $.ajax({
+            url: "/appconfig/freeproccache",
+            contentType: 'application/json; charset=utf-8',
+            cache: false,
+            type: "GET",
+            success: function (result) {
+                if (result.data) {
+                    $('#extras-freeproccache').text("Free Proc Cache");
+                }
+            },
+            error: function () { }
+        });
+    }
+</script>

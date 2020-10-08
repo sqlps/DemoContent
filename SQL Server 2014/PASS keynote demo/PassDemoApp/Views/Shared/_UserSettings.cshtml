@@ -1,0 +1,19 @@
+﻿@if (Request.IsAuthenticated) {
+    <div id="user-box">
+        <div id="user-name">@User.Identity.Name</div>
+        <div id="user-image"><img src="@ViewBag.ImageUrl" /></div>
+    </div>
+    <div id="red-box"><span>4</span>Notices</div>
+    <div id="logout-box">
+         @using (Html.BeginForm("LogOff", "Account", new { area = "" }, FormMethod.Post, new { id = "logoutForm" })) {
+            @Html.AntiForgeryToken()
+            <a href="javascript:document.getElementById('logoutForm').submit()">Log off</a>
+        }
+    </div>
+}
+else
+{
+    <div id="user-box">
+        <a data-bind="click: login">Login</a>
+    </div>
+}

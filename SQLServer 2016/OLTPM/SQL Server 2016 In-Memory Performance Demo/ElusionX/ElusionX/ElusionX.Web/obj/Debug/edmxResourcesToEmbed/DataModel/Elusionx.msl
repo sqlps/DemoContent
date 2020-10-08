@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ElusionX_ProdDBModelStoreContainer" CdmEntityContainer="ElusionX_ProdDBEntities">
+    <EntitySetMapping Name="ApplicationConfiguration">
+      <EntityTypeMapping TypeName="ElusionX_ProdDBModel.ApplicationConfiguration">
+        <MappingFragment StoreEntitySet="ApplicationConfiguration">
+          <ScalarProperty Name="Iterations" ColumnName="Iterations" />
+          <ScalarProperty Name="ApplicationConfigurationID" ColumnName="ApplicationConfigurationID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="MinCommandTimeOut" ColumnName="MinCommandTimeOut" />
+          <ScalarProperty Name="MaxCommandTimeOut" ColumnName="MaxCommandTimeOut" />
+          <ScalarProperty Name="NumberOfOrders" ColumnName="NumberOfOrders" />
+          <ScalarProperty Name="NumberOfUsers" ColumnName="NumberOfUsers" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

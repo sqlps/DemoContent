@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F14B399A-7131-4C87-9E4B-1186C45EF12D}") = "Security Reports", "Security Reports\Security Reports.rptproj", "{608F03B5-DF2B-43B5-AC8E-3AB18D040037}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		DebugLocal|Default = DebugLocal|Default
+		Release|Default = Release|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{608F03B5-DF2B-43B5-AC8E-3AB18D040037}.Debug|Default.ActiveCfg = Debug
+		{608F03B5-DF2B-43B5-AC8E-3AB18D040037}.Debug|Default.Build.0 = Debug
+		{608F03B5-DF2B-43B5-AC8E-3AB18D040037}.Debug|Default.Deploy.0 = Debug
+		{608F03B5-DF2B-43B5-AC8E-3AB18D040037}.DebugLocal|Default.ActiveCfg = DebugLocal
+		{608F03B5-DF2B-43B5-AC8E-3AB18D040037}.DebugLocal|Default.Build.0 = DebugLocal
+		{608F03B5-DF2B-43B5-AC8E-3AB18D040037}.Release|Default.ActiveCfg = Release
+		{608F03B5-DF2B-43B5-AC8E-3AB18D040037}.Release|Default.Build.0 = Release
+		{608F03B5-DF2B-43B5-AC8E-3AB18D040037}.Release|Default.Deploy.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

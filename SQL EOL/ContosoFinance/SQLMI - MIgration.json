@@ -1,0 +1,362 @@
+{
+  "Name": "ContosoFinance-SQLMI",
+  "Databases": [
+    {
+      "Status": "Completed",
+      "AssessmentRecommendations": [
+        {
+          "CompatibilityLevel": "CompatLevel100",
+          "Category": "Compatibility",
+          "Severity": "Error",
+          "ChangeCategory": "MigrationBlocker",
+          "RuleId": "Microsoft.Rules.Data.Upgrade.UR00321",
+          "Title": "Non ANSI style left outer join usage",
+          "Impact": "Non ANSI outer join operations (\"*=\" or \"=*\") are not supported and will not work in compatibility levels 90 and above.",
+          "Recommendation": "Microsoft recommends rewriting the query using ANSI outer join operators (LEFT OUTER JOIN, RIGHT OUTER JOIN).\n\n \nAn example how a Non ANSI join can be replaced with ANSI LEFT OUTER JOIN\n\n \nQuery with non ANSI style LEFT OUTER JOIN:\n\n \nSELECT A.id as aid, b.id as bid\nFROM A, B\nWHERE A.id *= B.id\n\n \nQuery with ANSI style LEFT OUTER JOIN:\n\n \nSELECT A.id as aid, b.id as bid\nFROM A\nLEFT OUTER JOIN B\nON  A.id = B.id",
+          "MoreInfo": "Using Joins (https://go.microsoft.com/fwlink/?LinkID=825566)",
+          "ImpactedObjects": [
+            {
+              "Name": "dbo.usp_CustomerWithNoVisits",
+              "ObjectType": "Procedure",
+              "ImpactDetail": "Object [dbo].[usp_CustomerWithNoVisits] is specifying left outer joins by using non-ansi syntax which is not supported on database compatiblity levels 90 or greater. For more details, please see: Line 4, Column 7.",
+              "SuggestedFixes": []
+            }
+          ]
+        },
+        {
+          "CompatibilityLevel": "CompatLevel110",
+          "Category": "Compatibility",
+          "Severity": "Error",
+          "ChangeCategory": "MigrationBlocker",
+          "RuleId": "Microsoft.Rules.Data.Upgrade.UR00321",
+          "Title": "Non ANSI style left outer join usage",
+          "Impact": "Non ANSI outer join operations (\"*=\" or \"=*\") are not supported and will not work in compatibility levels 90 and above.",
+          "Recommendation": "Microsoft recommends rewriting the query using ANSI outer join operators (LEFT OUTER JOIN, RIGHT OUTER JOIN).\n\n \nAn example how a Non ANSI join can be replaced with ANSI LEFT OUTER JOIN\n\n \nQuery with non ANSI style LEFT OUTER JOIN:\n\n \nSELECT A.id as aid, b.id as bid\nFROM A, B\nWHERE A.id *= B.id\n\n \nQuery with ANSI style LEFT OUTER JOIN:\n\n \nSELECT A.id as aid, b.id as bid\nFROM A\nLEFT OUTER JOIN B\nON  A.id = B.id",
+          "MoreInfo": "Using Joins (https://go.microsoft.com/fwlink/?LinkID=825566)",
+          "ImpactedObjects": [
+            {
+              "Name": "dbo.usp_CustomerWithNoVisits",
+              "ObjectType": "Procedure",
+              "ImpactDetail": "Object [dbo].[usp_CustomerWithNoVisits] is specifying left outer joins by using non-ansi syntax which is not supported on database compatiblity levels 90 or greater. For more details, please see: Line 4, Column 7.",
+              "SuggestedFixes": []
+            }
+          ]
+        },
+        {
+          "CompatibilityLevel": "CompatLevel120",
+          "Category": "Compatibility",
+          "Severity": "Error",
+          "ChangeCategory": "MigrationBlocker",
+          "RuleId": "Microsoft.Rules.Data.Upgrade.UR00321",
+          "Title": "Non ANSI style left outer join usage",
+          "Impact": "Non ANSI outer join operations (\"*=\" or \"=*\") are not supported and will not work in compatibility levels 90 and above.",
+          "Recommendation": "Microsoft recommends rewriting the query using ANSI outer join operators (LEFT OUTER JOIN, RIGHT OUTER JOIN).\n\n \nAn example how a Non ANSI join can be replaced with ANSI LEFT OUTER JOIN\n\n \nQuery with non ANSI style LEFT OUTER JOIN:\n\n \nSELECT A.id as aid, b.id as bid\nFROM A, B\nWHERE A.id *= B.id\n\n \nQuery with ANSI style LEFT OUTER JOIN:\n\n \nSELECT A.id as aid, b.id as bid\nFROM A\nLEFT OUTER JOIN B\nON  A.id = B.id",
+          "MoreInfo": "Using Joins (https://go.microsoft.com/fwlink/?LinkID=825566)",
+          "ImpactedObjects": [
+            {
+              "Name": "dbo.usp_CustomerWithNoVisits",
+              "ObjectType": "Procedure",
+              "ImpactDetail": "Object [dbo].[usp_CustomerWithNoVisits] is specifying left outer joins by using non-ansi syntax which is not supported on database compatiblity levels 90 or greater. For more details, please see: Line 4, Column 7.",
+              "SuggestedFixes": []
+            }
+          ]
+        },
+        {
+          "CompatibilityLevel": "CompatLevel130",
+          "Category": "Compatibility",
+          "Severity": "Error",
+          "ChangeCategory": "MigrationBlocker",
+          "RuleId": "Microsoft.Rules.Data.Upgrade.UR00321",
+          "Title": "Non ANSI style left outer join usage",
+          "Impact": "Non ANSI outer join operations (\"*=\" or \"=*\") are not supported and will not work in compatibility levels 90 and above.",
+          "Recommendation": "Microsoft recommends rewriting the query using ANSI outer join operators (LEFT OUTER JOIN, RIGHT OUTER JOIN).\n\n \nAn example how a Non ANSI join can be replaced with ANSI LEFT OUTER JOIN\n\n \nQuery with non ANSI style LEFT OUTER JOIN:\n\n \nSELECT A.id as aid, b.id as bid\nFROM A, B\nWHERE A.id *= B.id\n\n \nQuery with ANSI style LEFT OUTER JOIN:\n\n \nSELECT A.id as aid, b.id as bid\nFROM A\nLEFT OUTER JOIN B\nON  A.id = B.id",
+          "MoreInfo": "Using Joins (https://go.microsoft.com/fwlink/?LinkID=825566)",
+          "ImpactedObjects": [
+            {
+              "Name": "dbo.usp_CustomerWithNoVisits",
+              "ObjectType": "Procedure",
+              "ImpactDetail": "Object [dbo].[usp_CustomerWithNoVisits] is specifying left outer joins by using non-ansi syntax which is not supported on database compatiblity levels 90 or greater. For more details, please see: Line 4, Column 7.",
+              "SuggestedFixes": []
+            }
+          ]
+        },
+        {
+          "CompatibilityLevel": "CompatLevel140",
+          "Category": "Compatibility",
+          "Severity": "Error",
+          "ChangeCategory": "MigrationBlocker",
+          "RuleId": "Microsoft.Rules.Data.Upgrade.UR00321",
+          "Title": "Non ANSI style left outer join usage",
+          "Impact": "Non ANSI outer join operations (\"*=\" or \"=*\") are not supported and will not work in compatibility levels 90 and above.",
+          "Recommendation": "Microsoft recommends rewriting the query using ANSI outer join operators (LEFT OUTER JOIN, RIGHT OUTER JOIN).\n\n \nAn example how a Non ANSI join can be replaced with ANSI LEFT OUTER JOIN\n\n \nQuery with non ANSI style LEFT OUTER JOIN:\n\n \nSELECT A.id as aid, b.id as bid\nFROM A, B\nWHERE A.id *= B.id\n\n \nQuery with ANSI style LEFT OUTER JOIN:\n\n \nSELECT A.id as aid, b.id as bid\nFROM A\nLEFT OUTER JOIN B\nON  A.id = B.id",
+          "MoreInfo": "Using Joins (https://go.microsoft.com/fwlink/?LinkID=825566)",
+          "ImpactedObjects": [
+            {
+              "Name": "dbo.usp_CustomerWithNoVisits",
+              "ObjectType": "Procedure",
+              "ImpactDetail": "Object [dbo].[usp_CustomerWithNoVisits] is specifying left outer joins by using non-ansi syntax which is not supported on database compatiblity levels 90 or greater. For more details, please see: Line 4, Column 7.",
+              "SuggestedFixes": []
+            }
+          ]
+        },
+        {
+          "CompatibilityLevel": "CompatLevel100",
+          "Category": "Compatibility",
+          "Severity": "Information",
+          "ChangeCategory": "BehaviorChange",
+          "RuleId": "Microsoft.Rules.Data.Upgrade.UR00333",
+          "Title": "Unqualified Join(s) detected",
+          "Impact": "Starting with database compatibility level 90 and higher, in rare occasions, the 'unqualified join' syntax can cause 'missing join predicate' warnings, leading to long running queries.",
+          "Recommendation": "An example of \"Unqualified join\" is\n \nselect * from table1, table2\nwhere table1.col1 = table2.col1\n\n Use  explicit JOIN syntax in all cases. SQL Server supports the below explicit joins:\n - LEFT OUTER JOIN or LEFT JOIN\n- RIGHT OUTER JOIN or RIGHT JOIN\n- FULL OUTER JOIN or FULL JOIN\n- INNER JOIN",
+          "MoreInfo": "- Missing join Predicate Event Class (https://go.microsoft.com/fwlink/?LinkId=798567)\n- Deprecation of \"Old Style\" JOIN Syntax: Only A Partial Thing (https://go.microsoft.com/fwlink/?LinkId=798568)\n- DOC : Please strive to use ANSI-style joins instead of deprecated syntax  (https://go.microsoft.com/fwlink/?LinkId=798569)\n- Missing join predicate icon should be red (https://go.microsoft.com/fwlink/?LinkId=798570)",
+          "ImpactedObjects": [
+            {
+              "Name": "dbo.usp_CustomerWithNoVisits",
+              "ObjectType": "Procedure",
+              "ImpactDetail": "Object [dbo].[usp_CustomerWithNoVisits] uses the old style join syntax which can have poor performance at database compatibility level 90 and higher. For more details, please see: Line 3, Column 12.",
+              "SuggestedFixes": [
+                {}
+              ]
+            }
+          ]
+        },
+        {
+          "CompatibilityLevel": "CompatLevel110",
+          "Category": "Compatibility",
+          "Severity": "Information",
+          "ChangeCategory": "BehaviorChange",
+          "RuleId": "Microsoft.Rules.Data.Upgrade.UR00333",
+          "Title": "Unqualified Join(s) detected",
+          "Impact": "Starting with database compatibility level 90 and higher, in rare occasions, the 'unqualified join' syntax can cause 'missing join predicate' warnings, leading to long running queries.",
+          "Recommendation": "An example of \"Unqualified join\" is\n \nselect * from table1, table2\nwhere table1.col1 = table2.col1\n\n Use  explicit JOIN syntax in all cases. SQL Server supports the below explicit joins:\n - LEFT OUTER JOIN or LEFT JOIN\n- RIGHT OUTER JOIN or RIGHT JOIN\n- FULL OUTER JOIN or FULL JOIN\n- INNER JOIN",
+          "MoreInfo": "- Missing join Predicate Event Class (https://go.microsoft.com/fwlink/?LinkId=798567)\n- Deprecation of \"Old Style\" JOIN Syntax: Only A Partial Thing (https://go.microsoft.com/fwlink/?LinkId=798568)\n- DOC : Please strive to use ANSI-style joins instead of deprecated syntax  (https://go.microsoft.com/fwlink/?LinkId=798569)\n- Missing join predicate icon should be red (https://go.microsoft.com/fwlink/?LinkId=798570)",
+          "ImpactedObjects": [
+            {
+              "Name": "dbo.usp_CustomerWithNoVisits",
+              "ObjectType": "Procedure",
+              "ImpactDetail": "Object [dbo].[usp_CustomerWithNoVisits] uses the old style join syntax which can have poor performance at database compatibility level 90 and higher. For more details, please see: Line 3, Column 12.",
+              "SuggestedFixes": [
+                {}
+              ]
+            }
+          ]
+        },
+        {
+          "CompatibilityLevel": "CompatLevel120",
+          "Category": "Compatibility",
+          "Severity": "Information",
+          "ChangeCategory": "BehaviorChange",
+          "RuleId": "Microsoft.Rules.Data.Upgrade.UR00333",
+          "Title": "Unqualified Join(s) detected",
+          "Impact": "Starting with database compatibility level 90 and higher, in rare occasions, the 'unqualified join' syntax can cause 'missing join predicate' warnings, leading to long running queries.",
+          "Recommendation": "An example of \"Unqualified join\" is\n \nselect * from table1, table2\nwhere table1.col1 = table2.col1\n\n Use  explicit JOIN syntax in all cases. SQL Server supports the below explicit joins:\n - LEFT OUTER JOIN or LEFT JOIN\n- RIGHT OUTER JOIN or RIGHT JOIN\n- FULL OUTER JOIN or FULL JOIN\n- INNER JOIN",
+          "MoreInfo": "- Missing join Predicate Event Class (https://go.microsoft.com/fwlink/?LinkId=798567)\n- Deprecation of \"Old Style\" JOIN Syntax: Only A Partial Thing (https://go.microsoft.com/fwlink/?LinkId=798568)\n- DOC : Please strive to use ANSI-style joins instead of deprecated syntax  (https://go.microsoft.com/fwlink/?LinkId=798569)\n- Missing join predicate icon should be red (https://go.microsoft.com/fwlink/?LinkId=798570)",
+          "ImpactedObjects": [
+            {
+              "Name": "dbo.usp_CustomerWithNoVisits",
+              "ObjectType": "Procedure",
+              "ImpactDetail": "Object [dbo].[usp_CustomerWithNoVisits] uses the old style join syntax which can have poor performance at database compatibility level 90 and higher. For more details, please see: Line 3, Column 12.",
+              "SuggestedFixes": [
+                {}
+              ]
+            }
+          ]
+        },
+        {
+          "CompatibilityLevel": "CompatLevel130",
+          "Category": "Compatibility",
+          "Severity": "Information",
+          "ChangeCategory": "BehaviorChange",
+          "RuleId": "Microsoft.Rules.Data.Upgrade.UR00333",
+          "Title": "Unqualified Join(s) detected",
+          "Impact": "Starting with database compatibility level 90 and higher, in rare occasions, the 'unqualified join' syntax can cause 'missing join predicate' warnings, leading to long running queries.",
+          "Recommendation": "An example of \"Unqualified join\" is\n \nselect * from table1, table2\nwhere table1.col1 = table2.col1\n\n Use  explicit JOIN syntax in all cases. SQL Server supports the below explicit joins:\n - LEFT OUTER JOIN or LEFT JOIN\n- RIGHT OUTER JOIN or RIGHT JOIN\n- FULL OUTER JOIN or FULL JOIN\n- INNER JOIN",
+          "MoreInfo": "- Missing join Predicate Event Class (https://go.microsoft.com/fwlink/?LinkId=798567)\n- Deprecation of \"Old Style\" JOIN Syntax: Only A Partial Thing (https://go.microsoft.com/fwlink/?LinkId=798568)\n- DOC : Please strive to use ANSI-style joins instead of deprecated syntax  (https://go.microsoft.com/fwlink/?LinkId=798569)\n- Missing join predicate icon should be red (https://go.microsoft.com/fwlink/?LinkId=798570)",
+          "ImpactedObjects": [
+            {
+              "Name": "dbo.usp_CustomerWithNoVisits",
+              "ObjectType": "Procedure",
+              "ImpactDetail": "Object [dbo].[usp_CustomerWithNoVisits] uses the old style join syntax which can have poor performance at database compatibility level 90 and higher. For more details, please see: Line 3, Column 12.",
+              "SuggestedFixes": [
+                {}
+              ]
+            }
+          ]
+        },
+        {
+          "CompatibilityLevel": "CompatLevel140",
+          "Category": "Compatibility",
+          "Severity": "Information",
+          "ChangeCategory": "BehaviorChange",
+          "RuleId": "Microsoft.Rules.Data.Upgrade.UR00333",
+          "Title": "Unqualified Join(s) detected",
+          "Impact": "Starting with database compatibility level 90 and higher, in rare occasions, the 'unqualified join' syntax can cause 'missing join predicate' warnings, leading to long running queries.",
+          "Recommendation": "An example of \"Unqualified join\" is\n \nselect * from table1, table2\nwhere table1.col1 = table2.col1\n\n Use  explicit JOIN syntax in all cases. SQL Server supports the below explicit joins:\n - LEFT OUTER JOIN or LEFT JOIN\n- RIGHT OUTER JOIN or RIGHT JOIN\n- FULL OUTER JOIN or FULL JOIN\n- INNER JOIN",
+          "MoreInfo": "- Missing join Predicate Event Class (https://go.microsoft.com/fwlink/?LinkId=798567)\n- Deprecation of \"Old Style\" JOIN Syntax: Only A Partial Thing (https://go.microsoft.com/fwlink/?LinkId=798568)\n- DOC : Please strive to use ANSI-style joins instead of deprecated syntax  (https://go.microsoft.com/fwlink/?LinkId=798569)\n- Missing join predicate icon should be red (https://go.microsoft.com/fwlink/?LinkId=798570)",
+          "ImpactedObjects": [
+            {
+              "Name": "dbo.usp_CustomerWithNoVisits",
+              "ObjectType": "Procedure",
+              "ImpactDetail": "Object [dbo].[usp_CustomerWithNoVisits] uses the old style join syntax which can have poor performance at database compatibility level 90 and higher. For more details, please see: Line 3, Column 12.",
+              "SuggestedFixes": [
+                {}
+              ]
+            }
+          ]
+        },
+        {
+          "CompatibilityLevel": "CompatLevel100",
+          "Category": "Compatibility",
+          "Severity": "Error",
+          "ChangeCategory": "MigrationBlocker",
+          "RuleId": "46010",
+          "Title": "One or more objects contain statements that are not supported in Azure SQL Database",
+          "Impact": "While assessing the schema on the source database, one or more syntax issues were found. Syntax issues on the source database indicate that some objects contain syntax that is unsupported in Azure SQL Database.",
+          "Recommendation": "Note that some of these syntax issues may be reported in more detail as separate issues in this assessment.  Review the list of objects and issues reported, fix the syntax errors, and re-run assessment before migrating this database.",
+          "MoreInfo": "",
+          "ImpactedObjects": [
+            {
+              "Name": "dbo.usp_CustomerWithNoVisits",
+              "ObjectType": "Procedure",
+              "ImpactDetail": "Procedure: [dbo].[usp_CustomerWithNoVisits] contains a statement that is not supported on Microsoft Azure SQL Database v12. The specific error is: Incorrect syntax near *=.",
+              "SuggestedFixes": []
+            }
+          ]
+        },
+        {
+          "CompatibilityLevel": "CompatLevel110",
+          "Category": "Compatibility",
+          "Severity": "Error",
+          "ChangeCategory": "MigrationBlocker",
+          "RuleId": "46010",
+          "Title": "One or more objects contain statements that are not supported in Azure SQL Database",
+          "Impact": "While assessing the schema on the source database, one or more syntax issues were found. Syntax issues on the source database indicate that some objects contain syntax that is unsupported in Azure SQL Database.",
+          "Recommendation": "Note that some of these syntax issues may be reported in more detail as separate issues in this assessment.  Review the list of objects and issues reported, fix the syntax errors, and re-run assessment before migrating this database.",
+          "MoreInfo": "",
+          "ImpactedObjects": [
+            {
+              "Name": "dbo.usp_CustomerWithNoVisits",
+              "ObjectType": "Procedure",
+              "ImpactDetail": "Procedure: [dbo].[usp_CustomerWithNoVisits] contains a statement that is not supported on Microsoft Azure SQL Database v12. The specific error is: Incorrect syntax near *=.",
+              "SuggestedFixes": []
+            }
+          ]
+        },
+        {
+          "CompatibilityLevel": "CompatLevel120",
+          "Category": "Compatibility",
+          "Severity": "Error",
+          "ChangeCategory": "MigrationBlocker",
+          "RuleId": "46010",
+          "Title": "One or more objects contain statements that are not supported in Azure SQL Database",
+          "Impact": "While assessing the schema on the source database, one or more syntax issues were found. Syntax issues on the source database indicate that some objects contain syntax that is unsupported in Azure SQL Database.",
+          "Recommendation": "Note that some of these syntax issues may be reported in more detail as separate issues in this assessment.  Review the list of objects and issues reported, fix the syntax errors, and re-run assessment before migrating this database.",
+          "MoreInfo": "",
+          "ImpactedObjects": [
+            {
+              "Name": "dbo.usp_CustomerWithNoVisits",
+              "ObjectType": "Procedure",
+              "ImpactDetail": "Procedure: [dbo].[usp_CustomerWithNoVisits] contains a statement that is not supported on Microsoft Azure SQL Database v12. The specific error is: Incorrect syntax near *=.",
+              "SuggestedFixes": []
+            }
+          ]
+        },
+        {
+          "CompatibilityLevel": "CompatLevel130",
+          "Category": "Compatibility",
+          "Severity": "Error",
+          "ChangeCategory": "MigrationBlocker",
+          "RuleId": "46010",
+          "Title": "One or more objects contain statements that are not supported in Azure SQL Database",
+          "Impact": "While assessing the schema on the source database, one or more syntax issues were found. Syntax issues on the source database indicate that some objects contain syntax that is unsupported in Azure SQL Database.",
+          "Recommendation": "Note that some of these syntax issues may be reported in more detail as separate issues in this assessment.  Review the list of objects and issues reported, fix the syntax errors, and re-run assessment before migrating this database.",
+          "MoreInfo": "",
+          "ImpactedObjects": [
+            {
+              "Name": "dbo.usp_CustomerWithNoVisits",
+              "ObjectType": "Procedure",
+              "ImpactDetail": "Procedure: [dbo].[usp_CustomerWithNoVisits] contains a statement that is not supported on Microsoft Azure SQL Database v12. The specific error is: Incorrect syntax near *=.",
+              "SuggestedFixes": []
+            }
+          ]
+        },
+        {
+          "CompatibilityLevel": "CompatLevel140",
+          "Category": "Compatibility",
+          "Severity": "Error",
+          "ChangeCategory": "MigrationBlocker",
+          "RuleId": "46010",
+          "Title": "One or more objects contain statements that are not supported in Azure SQL Database",
+          "Impact": "While assessing the schema on the source database, one or more syntax issues were found. Syntax issues on the source database indicate that some objects contain syntax that is unsupported in Azure SQL Database.",
+          "Recommendation": "Note that some of these syntax issues may be reported in more detail as separate issues in this assessment.  Review the list of objects and issues reported, fix the syntax errors, and re-run assessment before migrating this database.",
+          "MoreInfo": "",
+          "ImpactedObjects": [
+            {
+              "Name": "dbo.usp_CustomerWithNoVisits",
+              "ObjectType": "Procedure",
+              "ImpactDetail": "Procedure: [dbo].[usp_CustomerWithNoVisits] contains a statement that is not supported on Microsoft Azure SQL Database v12. The specific error is: Incorrect syntax near *=.",
+              "SuggestedFixes": []
+            }
+          ]
+        }
+      ],
+      "Name": "ContosoFinance",
+      "SizeMB": 32.375,
+      "ServerVersion": "10.50.6560.0",
+      "ServerEdition": "Standard Edition (64-bit)",
+      "CompatibilityLevel": "CompatLevel80",
+      "ServerName": "SQL2008-EOL"
+    }
+  ],
+  "ServerInstances": [
+    {
+      "ServerName": "sql2008-eol",
+      "Version": "10.50.6560.0",
+      "Status": "Completed",
+      "AssessmentRecommendations": [
+        {
+          "Category": "FeatureParity",
+          "Severity": "Warning",
+          "FeatureParityCategory": "PartiallySupportedFeature",
+          "RuleId": "373e516d-5b36-4e83-ba42-0358990b973d",
+          "Title": "Transactional replication to Azure SQL Database subscriber is supported",
+          "Impact": "Replication is a set of technologies for copying and distributing data and database objects from one database to another and then synchronizing between databases to maintain consistency. Using replication, you can distribute data to different locations and to remote or mobile users over local and wide area networks, dial-up connections, wireless connections, and the Internet",
+          "Recommendation": "Your database is identified to be part of a replication topology. Publishers and Distributors of a replication topology are not supported in Azure SQL Database. However, if your database is serving as a Subscriber, you can configure Azure SQL Database as a Subscriber of an on-prem SQL Server Transactional Replication topology.",
+          "MoreInfo": "Transactional Replication to Azure SQL Database now in public preview (https://go.microsoft.com/fwlink/?linkid=838288)",
+          "ImpactedDatabases": [
+            {
+              "Name": "ContosoFinance",
+              "ObjectType": "Database",
+              "ImpactDetail": "Replication is enabled for this database.",
+              "SuggestedFixes": []
+            }
+          ]
+        },
+        {
+          "Category": "FeatureParity",
+          "Severity": "Warning",
+          "FeatureParityCategory": "UnsupportedFeature",
+          "RuleId": "d6fadcc4-9a72-4846-bda8-621882abb98e",
+          "Title": "Azure SQL Database doesn't support Analysis Services; migrate to Azure Analysis Services",
+          "Impact": "Microsoft SQL Server Analysis Services (SSAS) is an online analytical processing (OLAP), data mining and reporting tool in Microsoft SQL Server. SSAS is used as a tool by organizations to analyze and make sense of information that might be spread out across multiple databases or in disparate tables.",
+          "Recommendation": "Migrate to Azure Analysis Services, which is compatible with the SQL Server 2016 Analysis Services Enterprise Edition. Azure Analysis Services supports tabular models at the 120 compatibility level. DirectQuery, partitions, row-level security, bi-directional relationships, and translations are all supported.",
+          "MoreInfo": "What is Azure Analysis Services? (https://go.microsoft.com/fwlink/?linkid=838298)",
+          "ImpactedDatabases": []
+        },
+        {
+          "Category": "FeatureParity",
+          "Severity": "Warning",
+          "FeatureParityCategory": "UnsupportedFeature",
+          "RuleId": "e37e2d14-3a15-4968-9d38-6a422ccc92a7",
+          "Title": "SQL Server Reporting Services is not supported in Azure SQL Database",
+          "Impact": "SQL Server Reporting Services is a solution that customers deploy on their own premises for creating, publishing, and managing reports, then delivering them to the right users in different ways, whether that's viewing them in web browser, on their mobile device, or as an email in their inbox.",
+          "Recommendation": "Install Reporting Services and Reporting services databases on an Azure virtual machine.\n Use Azure SQL Database as the data source.",
+          "MoreInfo": "SQL Azure Connection Type (SSRS) (https://go.microsoft.com/fwlink/?linkid=838277)",
+          "ImpactedDatabases": []
+        }
+      ]
+    }
+  ],
+  "Status": "Completed",
+  "TargetPlatform": "AzureSqlDatabase"
+}

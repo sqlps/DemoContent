@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<SqlWorkbenchSqlProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="DBA OverView">
+  <Items>
+    <LogicalFolder Name="Connections" Type="2" Sorted="true">
+      <Items />
+    </LogicalFolder>
+    <LogicalFolder Name="Queries" Type="0" Sorted="true">
+      <Items>
+        <FileNode Name="1. Create In memory DB.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>1. Create In memory DB.sql</FullPath>
+        </FileNode>
+        <FileNode Name="2. Create a Table.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>2. Create a Table.sql</FullPath>
+        </FileNode>
+        <FileNode Name="2.1 Create Procs 2.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>2.1 Create Procs 2.sql</FullPath>
+        </FileNode>
+        <FileNode Name="2.2 Load Some Data 2.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>2.2 Load Some Data 2.sql</FullPath>
+        </FileNode>
+        <FileNode Name="2.3 Create Table in Regular DB.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>2.3 Create Table in Regular DB.sql</FullPath>
+        </FileNode>
+        <FileNode Name="3. Create Sequence.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>3. Create Sequence.sql</FullPath>
+        </FileNode>
+        <FileNode Name="4. Bind to RG Pool.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>4. Bind to RG Pool.sql</FullPath>
+        </FileNode>
+        <FileNode Name="5. Cleanup.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>5. Cleanup.sql</FullPath>
+        </FileNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="Miscellaneous" Type="3" Sorted="true">
+      <Items />
+    </LogicalFolder>
+  </Items>
+</SqlWorkbenchSqlProject>

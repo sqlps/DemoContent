@@ -1,0 +1,1 @@
+ostress -SMININT-SB -Uadmindba -Padmindba -dAdventureWorks2016 -i"C:\Users\dpless\Desktop\Security and Performance Workshop\DEMOS\2. QDS\3. Query Store\Random_parameterized_queries.sql" -n5 -r500 -t30 -l30 -oC:\TEMP\ostress_log153464578

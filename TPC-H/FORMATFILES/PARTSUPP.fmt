@@ -1,0 +1,7 @@
+14.0
+5
+1       SQLCHAR             0       12      "|"        1     PS_PARTKEY                     ""
+2       SQLCHAR             0       12      "|"        2     PS_SUPPKEY                     ""
+3       SQLCHAR             0       12      "|"        3     PS_AVAILQTY                    ""
+4       SQLCHAR             0       41      "|"        4     PS_SUPPLYCOST                  ""
+5       SQLCHAR             0       199     "|\r\n"    5     PS_COMMENT                     SQL_Latin1_General_CP1_CI_AS

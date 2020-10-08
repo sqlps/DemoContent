@@ -1,0 +1,13 @@
+C:\Demos\SQLServer 2016\Hybrid Cloud Capabilities\In-Memory Enhancements\Ticket Reservations\DemoWorkload\bin\Debug\DemoWorkload.exe.config
+C:\Demos\SQLServer 2016\Hybrid Cloud Capabilities\In-Memory Enhancements\Ticket Reservations\DemoWorkload\bin\Debug\DemoWorkload.exe
+C:\Demos\SQLServer 2016\Hybrid Cloud Capabilities\In-Memory Enhancements\Ticket Reservations\DemoWorkload\bin\Debug\DemoWorkload.pdb
+C:\Demos\SQLServer 2016\Hybrid Cloud Capabilities\In-Memory Enhancements\Ticket Reservations\DemoWorkload\bin\Debug\WindowsFormsApplication2.exe.CodeAnalysisLog.xml
+C:\Demos\SQLServer 2016\Hybrid Cloud Capabilities\In-Memory Enhancements\Ticket Reservations\DemoWorkload\bin\Debug\DemoWorkload.exe.lastcodeanalysissucceeded
+C:\Demos\SQLServer 2016\Hybrid Cloud Capabilities\In-Memory Enhancements\Ticket Reservations\DemoWorkload\bin\Debug\CircularGauge.dll
+C:\Demos\SQLServer 2016\Hybrid Cloud Capabilities\In-Memory Enhancements\Ticket Reservations\DemoWorkload\obj\Debug\DemoWorkload.csprojResolveAssemblyReference.cache
+C:\Demos\SQLServer 2016\Hybrid Cloud Capabilities\In-Memory Enhancements\Ticket Reservations\DemoWorkload\obj\Debug\DemoWorkload.FrmConfig.resources
+C:\Demos\SQLServer 2016\Hybrid Cloud Capabilities\In-Memory Enhancements\Ticket Reservations\DemoWorkload\obj\Debug\DemoWorkload.FrmMain.resources
+C:\Demos\SQLServer 2016\Hybrid Cloud Capabilities\In-Memory Enhancements\Ticket Reservations\DemoWorkload\obj\Debug\DemoWorkload.Properties.Resources.resources
+C:\Demos\SQLServer 2016\Hybrid Cloud Capabilities\In-Memory Enhancements\Ticket Reservations\DemoWorkload\obj\Debug\DemoWorkload.csproj.GenerateResource.Cache
+C:\Demos\SQLServer 2016\Hybrid Cloud Capabilities\In-Memory Enhancements\Ticket Reservations\DemoWorkload\obj\Debug\DemoWorkload.exe
+C:\Demos\SQLServer 2016\Hybrid Cloud Capabilities\In-Memory Enhancements\Ticket Reservations\DemoWorkload\obj\Debug\DemoWorkload.pdb

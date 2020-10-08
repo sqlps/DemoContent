@@ -1,0 +1,2 @@
+"C:\Program Files\Microsoft Corporation\RMLUtils\ostress" -Q"LoadTest.usp_InsertWorkload 'RowsInserted-Basic'" -S"zbqfsz8os9.database.windows.net" -dAdventureworks2014 -ULoadTest -PP@ssw0rd -t15 -o"RowsInserted-Basic" -q -n1 -r50
+pause

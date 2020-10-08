@@ -1,0 +1,211 @@
+﻿<div id="dashboardcontainer" style="min-height:730px;background: url('../../images/map.jpg');width:100%;margin-top:-15px">
+    <div class="container half-unit" id="mainContainer" style="margin-bottom:0px;margin-top:10px">
+        <div class="alert alert-success" role="alert" style="display:none" id="diskbasedcomplete">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <strong>Successfully</strong> completed placing orders on disk based database, now click 'Place Orders' again to place orders using In-Memory database.
+        </div>
+        <div class="row smpl-step" style="border-bottom: 0; min-width: 500px;">
+            <div class="col-xs-4 smpl-step-step" id="step1">
+                <div class="text-center smpl-step-num">Step 1</div>
+                <div class="progress">
+                    <div class="progress-bar"></div>
+                </div>
+                <a class="smpl-step-icon"><i class="fa fa-user" style="font-size: 60px; padding-left: 12px; padding-top: 3px; color: black;"></i></a>
+                <div class="smpl-step-info text-center">Place Orders (Disk Based)</div>
+            </div>
+            <div class="col-xs-4 smpl-step-step disabled" id="step2">
+                <div class="text-center smpl-step-num">Step 2</div>
+                <div class="progress">
+                    <div class="progress-bar"></div>
+                </div>
+                <a class="smpl-step-icon"><i class="fa fa-repeat" style="font-size: 60px; padding-left: 7px; padding-top: 7px; color: black;"></i></a>
+                <div class="smpl-step-info text-center">Place Orders (In-Memory)</div>
+            </div>
+            <div class="col-xs-4 smpl-step-step disabled" id="step3">
+                <div class="text-center smpl-step-num">Step 3</div>
+                <div class="progress">
+                    <div class="progress-bar"></div>
+                </div>
+                <a class="smpl-step-icon"><i class="fa fa-download" style="font-size: 60px; padding-left: 8px; padding-top: 4px; color: black; opacity: 0.3;"></i></a>
+                <div class="smpl-step-info text-center">View Performance Summary.</div>
+            </div>
+        </div>
+        <span class="graph-title" id="scenario1title" style="margin-left:492px;">Disk Based</span>
+    </div>
+    <div class="container" style="width:100%;margin-top:5px">
+        @*<div class="text" style="text-align:center;margin-top:-1px;margin-left:212px;width:1150px;background:#ec971f;margin-bottom:5px">*@
+        @*<div class="text" style="text-align:center;margin-top:-1px;margin-left:212px;width:1150px;background:#333;margin-bottom:5px">
+            </div>*@
+        <ul class="nav nav-tabs" role="tablist" style="font-size:15px" id="tabsheader">
+            <li id="technicaltab" data-chart="1"><a data-chart="1" href="#technical" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> Technical</a></li>
+            <li id="businesstab" data-chart="1"><a data-chart="1" href="#business" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-usd"></span> Business</a></li>
+            <li id="inmemory-technicaltab" data-chart="1" style="display:none"><a data-chart="1" href="#inmemory-technical" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> Technical</a></li>
+            <li id="inmemory-businesstab" data-chart="1" style="display:none"><a data-chart="1" href="#inmemory-business" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-usd"></span> Business</a></li>
+            <li id="performancesummarytab" data-chart="1" style="display:none"><a data-chart="1" href="#performancesummary" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-signal"></span> Performance Summary</a></li>
+        </ul>
+        <div class="tab-content" style="" id="tabscontent">
+            <!-- First ROW OF Technical Metrics -->
+            <div id="technical" class="tab-pane fade active in">
+                <div class="row">
+                    <!--Disk based-->
+                    <div class="col-sm-3 col-lg-3 cont">
+                        <div class="half-unit" style="height:300px;margin-bottom:10px">
+                            <div class="text">
+                                <span class="graph-title">Elapsed Time</span>
+                            </div>
+                            <div id="load"></div>
+                            <div class="clockcenter desc">
+                                <digiclock>00:00:00</digiclock>
+                            </div>
+                        </div>
+                        <div class="half-unit" style="height:250px;margin-bottom:10px">
+                            <div class="text" style="margin-top:5px">
+                                <div class="graph-title">Batch Requests</div>
+                                <div class="value" id="diskbased-batchrequests">0</div>
+                                <div class="desc" id="diskbased-batchrequests-subtext">Per Sec</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 col-lg-3 cont">
+                        <div class="half-unit" style="height:180px;margin-bottom:10px">
+                            <div class="text">
+                                <div class="graph-title">Requests</div>
+                                <div class="value" id="diskbased-contextswitches">0</div>
+                                <div class="desc" id="diskbased-contextswitches-subtext">Per Sec</div>
+                            </div>
+                        </div>
+                        <div class="half-unit" style="height:180px;margin-bottom:10px">
+                            <div class="text" style="margin-top:5px">
+                                <div class="graph-title">Exceptions</div>
+                                <div class="value" id="diskbased-exceptions">0</div>
+                            </div>
+                        </div>
+                        <div class="half-unit" style="height:180px;margin-bottom:10px">
+                            <div class="text" style="margin-top:5px">
+                                <div class="graph-title">Latch Waits</div>
+                                <div class="value" id="diskbased-latchwaits">0</div>
+                                <div class="desc" id="diskbased-latchwaits-subtext">Per Sec</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-6 cont">
+                        <div class="half-unit" style="height:275px;margin-bottom:10px">
+                            <div class="text" style="align-content:center">
+                                <div class="graph-title">Sessions</div>
+                                <div class="row">
+                                    <div class="col-sm-12 col-lg-12 cont" style="height:210px;">
+                                        <div class="chart-wrapper">
+                                            <div id="diskbased-requests" style="height:100%;width:100%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="half-unit" style="height:274px">
+                            <div class="text" style="align-content:center">
+                                <div class="graph-title">CPU Usage</div>
+                                <div class="row">
+                                    <div class="col-sm-12 col-lg-12 cont" style="height:210px;">
+                                        <div class="chart-wrapper">
+                                            <div id="diskbased-cpu" style="height:100%;width:100%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- /row -->
+                    <!-- Second ROW OF Technical Metrics -->
+                </div>
+            </div>
+            <div class="tab-pane fade" id="business" data-chart="1">
+                <div class="row">
+                    <!--Disk based-->
+                    <div class="col-sm-3 col-lg-3 cont">
+                        <div class="half-unit" style="height:300px;margin-bottom:10px">
+                            <div class="graph-title">Revenue</div>
+                            <div class="row">
+                                <div class="col-sm-12 col-lg-12 cont" style="height:240px">
+                                    <div class="chart-wrapper">
+                                        <div id="diskbased-profitloss" style="height:100%;width:100%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="half-unit" style="height:250px">
+                            <div class="row" style="min-height:70px;margin-top:5px">
+                                <div class="col-sm-12 col-lg-12 cont">
+                                    <div class="desc">Total Value</div>
+                                    <div class="value" id="diskbased-totalvalue">0</div>
+                                </div>
+                            </div>
+                            @*</div>
+                                <div class="half-unit" style="height:500px">*@
+                            <div class="row" style="min-height:70px;margin-top:5px">
+                                <div class="col-sm-12 col-lg-12 cont">
+                                    <div class="desc">Estimated Loss</div>
+                                    <div class="value" id="diskbased-estimatedloss">0</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 col-lg-4 cont">
+                        <div class="half-unit" style="height:180px;margin-bottom:10px">
+                            <div class="row">
+                                <div class="text">
+                                    <div class="graph-title" style="margin-top:5px">Users</div>
+                                    <div class="value">
+                                        <span id="diskbased-users">0</span>
+                                        <span class="value" id="diskbased-totalusers">0</span>
+                                    </div>
+                                    <div class="desc">Success/Total</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="half-unit" style="height:200px;margin-bottom:10px">
+                            <div class="text">
+                                <div class="graph-title" style="margin-top:5px">Orders</div>
+                                <div class="value">
+                                    <span id="diskbased-orders">0</span>
+                                    <span id="diskbased-totalorders">0</span>
+                                </div>
+                                <div class="desc">Success/Total</div>
+                            </div>
+                        </div>
+                        <div class="half-unit" style="height:160px;margin-bottom:10px">
+                            <div class="text">
+                                <div class="graph-title" style="margin-top:5px">Failed Orders</div>
+                                <div class="value" id="diskbased-failedorders">0</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-5 col-lg-5 cont">
+                        <div class="half-unit" style="height:370px;margin-bottom:10px">
+                            <div class="text" style="align-content:center">
+                                <div class="graph-title">Average Sale Revenue</div>
+                                <div class="row">
+                                    <div class="col-sm-12 col-lg-12 cont" style="height:310px;">
+                                        <div class="chart-wrapper">
+                                            <div id="diskbased-avgvalue" style="height:100%;width:100%">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="half-unit" style="height:180px;margin-bottom:10px">
+                            <div class="text" style="align-content:center">
+                                <div class="graph-title" style="margin-bottom:5px">Avg. Time Taken Per Order</div>
+                                <div class="value" id="diskbased-avgtime">0</div>
+                                <div class="desc">Milli Sec</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            @Html.Partial("_inmemory")
+            @Html.Partial("_performancesummary")
+            @Scripts.Render("~/bundles/uijavascripts")
+        </div>
+    </div><!-- /row -->
+</div>
+

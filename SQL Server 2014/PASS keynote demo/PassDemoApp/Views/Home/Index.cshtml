@@ -1,0 +1,19 @@
+﻿@model MSCorp.SqlPass2013.Web.Models.LoginModel
+@{
+    ViewBag.Title = "SQL Pass 2013";
+}
+@functions{
+    public string GetAntiForgeryToken()
+    {
+        string cookieToken, formToken;
+        AntiForgery.GetTokens(null, out cookieToken, out formToken);
+        return cookieToken + ":" + formToken;                
+    }
+}
+
+<div id="main-content">
+    <div class="content-wrapper">
+        @Html.Partial("_RecommendedProducts")
+        @Html.Partial("_Product")
+    </div>
+</div>

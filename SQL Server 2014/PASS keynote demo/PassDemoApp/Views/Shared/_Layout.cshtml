@@ -1,0 +1,63 @@
+﻿@using MSCorp.SqlPass2013.Web.Models
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title</title>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width" />
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryui")
+    @Scripts.Render("~/bundles/knockout")
+    @Scripts.Render("~/bundles/sammy")
+    <script type="text/javascript">
+        var loginUser = {
+            isLoggedIn: @(User.Identity.IsAuthenticated ? "true" : "false"),
+            name: '@User.Identity.Name',
+            imgUrl: '@ViewBag.ImageUrl'
+        };
+    </script>
+    @Scripts.Render("~/bundles/home")
+    @Scripts.Render("~/bundles/ajaxlogin")
+    @RenderSection("scripts", required: false)
+</head>
+    <body data-bind="css: { 'product-body-page': productViewModel() != undefined }">
+    <div id="header">
+        <div id="banner">
+            <img src="~/Images/Logo-Fabrikam-New.png" />
+        </div>
+        <div id="user-panel">
+            @Html.Partial("_UserSettings")
+        </div>
+    </div>
+    
+    <div id="menu">
+        <ul data-bind="foreach: menuItems">
+            <li><a data-bind="text: name, click: gotoLink, css: { 'red-text-color': isCurrent, 'light-text-color': !isCurrent() && $parent.productViewModel() == undefined, 'dark-text-color': !isCurrent() && $parent.productViewModel() != undefined }"></a></li>
+        </ul>
+    </div>
+
+    <div id="body">
+        @RenderBody()
+    </div>
+    
+    @if (!@User.Identity.IsAuthenticated)
+{
+    <div class="modal-background" data-bind="fadeVisible: modalBackgroundVisible"></div>
+    <div id="login-panel" data-bind="slideDown: modalBackgroundVisible">
+        <div id="local-login-panel">
+            <div class="login-logo"><img src="~/Images/Logo-Fabrikam-New.png" /></div>
+            <div class="login-header"><h2>log in</h2></div>
+            <div class="login-form">
+                @Html.Partial("_Login")
+            </div>
+            <div class="login-close" data-bind="click: closeLogin">close</div>
+        </div>
+    </div>
+}
+
+   
+</body>
+</html>

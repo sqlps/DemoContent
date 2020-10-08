@@ -1,0 +1,159 @@
+﻿<div class="container" style="min-height:690px;background: url('../../images/map.jpg');width:100%;margin-top:-10px">
+    <div class="row" style="height:60px;margin-top:20px">
+        <div class="col-sm-3 col-lg-3 cont">
+            <button class="btn btn-warning"
+                    style="border-radius:10px;margin:10px" id="btnplaceorders">
+                Place Orders
+            </button>
+        </div>
+        <div class="col-sm-4 col-lg-4 cont">
+            <button class="btn btn-warning"
+                    style="border-radius:10px;margin:10px" id="btnyoysales">
+                YOY Sales
+            </button>
+        </div>
+        <div class="col-sm-5 col-lg-5 cont">
+            <button class="btn btn-warning"
+                    style="border-radius:10px;margin:10px" id="btnrtoaplaceorders">
+                RTOA_PlaceOrders
+            </button>
+            <button class="btn btn-warning"
+                    style="border-radius:10px;margin:10px" id="btnrtoayoysales">
+                RTOA_YOYSales
+            </button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-3 col-lg-3 cont">
+            <div class="half-unit" style="height:580px">
+                <div class="row">
+                    <span class="graph-title">In Memory OLTP</span>
+                </div>
+                <div class="text" style="margin-top:30px">
+                    <div class="value ng-binding" id="oltp-orders">0</div>
+                    <div class="desc">Orders</div>
+                </div>
+                <div class="text" style="margin-top:60px">
+                    <div class="value ng-binding" id="oltp-timetaken">0 s</div>
+                    <div class="desc">Time Taken</div>
+                </div>
+                @*<div class="text" style="margin-top:60px" id="div-oltp-cpu">
+                        <div class="value ng-binding" id="oltp-cpu">0%</div>
+                        <div class="desc">Average CPU</div>
+                    </div>*@
+            </div>
+        </div>
+        <div class="col-sm-4 col-lg-4 cont">
+            <div class="half-unit" style="height:580px">
+                <div class="row">
+                    <span class="graph-title">In-Memory Analytics</span>
+                </div>
+                <div id="graphcontainer">
+                </div>
+                <div class="row">
+                    <div class="value ng-binding" id="rtoa-timetaken">0 ms</div>
+                    <div class="desc">Time Taken</div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6 col-lg-6 con">
+                        <div class="text" id-="div-rtoa-cpu">
+                            <div class="value ng-binding" id="rtoa-cpu">0%</div>
+                            <div class="desc">Average CPU</div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-6 con">
+                        <div class="value ng-binding" id="rtoa-iterations">0</div>
+                        <div class="desc">Iterations</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-5 col-lg-5 cont">
+            <div class="half-unit" style="height:50px;margin-bottom:10px">
+                <span class="graph-title">Results</span>
+            </div>
+        </div>
+        <div class="col-sm-5 col-lg-5 cont">
+            <div class="half-unit" style="height:130px;margin-bottom:10px">
+                <span>In-Memory OLTP</span>
+                <div class="text">
+                    <div class="row">
+                        <div class="col-sm-4 col-lg-4 con">
+                            <div class="value ng-binding" id="results-oltp-orders">0</div>
+                            <div class="desc">Orders</div>
+                        </div>
+                        <div class="col-sm-4 col-lg-4 con">
+                            <div class="value ng-binding" id="results-oltp-timetaken">0 s</div>
+                            <div class="desc">Time</div>
+                        </div>
+                        @*<div class="col-sm-4 col-lg-4 con">
+                                <div class="value ng-binding" id="results-oltp-cpu">0%</div>
+                                <div class="desc">Average CPU</div>
+                            </div>*@
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-5 col-lg-5 cont">
+            <div class="half-unit" style="height:130px;margin-bottom:10px">
+                <span>In-Memory Analytics</span>
+                <div class="text">
+                    <div class="row">
+                        <div class="col-sm-4 col-lg-4 con">
+                            <div class="value ng-binding" id="results-rtoa-iterations">0</div>
+                            <div class="desc">Iterations</div>
+                        </div>
+                        <div class="col-sm-4 col-lg-4 con">
+                            <div class="value ng-binding" id="results-rtoa-timetaken">0 ms</div>
+                            <div class="desc">Time</div>
+                        </div>
+                        <div class="col-sm-4 col-lg-4 con">
+                            <div class="value ng-binding" id="results-rtoa-cpu">0%</div>
+                            <div class="desc">Average CPU</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-5 col-lg-5 cont">
+            <div class="half-unit" style="height:240px;margin-bottom:10px">
+                <span>In-Memory OLTP and RTOA</span>
+                <div class="text">
+                    <div class="row">
+                        <div class="col-sm-4 col-lg-4 con">
+                            <div class="value ng-binding" id="results-both-oltp-orders">0</div>
+                            <div class="desc">Orders</div>
+                        </div>
+                        <div class="col-sm-4 col-lg-4 con">
+                            <div class="value ng-binding" id="results-both-oltp-timetaken">0 s</div>
+                            <div class="desc">Time</div>
+                        </div>
+                        @*<div class="col-sm-4 col-lg-4 con" id="div-results-both-oltp-cpu">
+                                <div class="value ng-binding" id="results-both-oltp-cpu">0%</div>
+                                <div class="desc">Average CPU</div>
+                            </div>*@
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-4 col-lg-4 con" id="div-results-both-rtoa-iterations">
+                            <div class="value ng-binding" id="results-both-rtoa-iterations">0</div>
+                            <div class="desc">Iterations</div>
+                        </div>
+                        <div class="col-sm-4 col-lg-4 con">
+                            <div class="value ng-binding" id="results-both-rtoa-timetaken">0 ms</div>
+                            <div class="desc">Time</div>
+                        </div>
+                        <div class="col-sm-4 col-lg-4 con" id="div-results-both-rtoa-cpu">
+                            <div class="value ng-binding" id="results-both-rtoa-cpu">0%</div>
+                            <div class="desc">Average CPU</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@Scripts.Render("~/bundles/realtimejavascriptsv1")
+
+
+
+

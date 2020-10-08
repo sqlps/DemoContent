@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="Default Web Site/ElusionX" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Demos\\SQLServer\ 2016\\OLTPM\\SQL\ Server\ 2016\ In-Memory\ Performance\ Demo\\ElusionX\\ElusionX\\ElusionX\.Web\\obj\\Release\\Package\\PackageTmp$" />
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^C:\\Demos\\SQLServer\ 2016\\OLTPM\\SQL\ Server\ 2016\ In-Memory\ Performance\ Demo\\ElusionX\\ElusionX\\ElusionX\.Web\\obj\\Release\\Package\\PackageTmp$" />
+  </parameter>
+  <parameter name="dwconnection-Web.config Connection String" description="" value="Data Source=.;Database=ElusionX_DW;Integrated Security=False;User ID=sa;Password=S@tyam79;Connect Timeout=120;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Demos\\SQLServer\ 2016\\OLTPM\\SQL\ Server\ 2016\ In-Memory\ Performance\ Demo\\ElusionX\\ElusionX\\ElusionX\.Web\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='dwconnection']/@connectionString" />
+  </parameter>
+  <parameter name="ElusionX_ProdDBEntities-Web.config Connection String" description="" value="metadata=res://*/DataModel.Elusionx.csdl|res://*/DataModel.Elusionx.ssdl|res://*/DataModel.Elusionx.msl;provider=System.Data.SqlClient;provider connection string=&quot;Data Source=.;initial catalog=ElusionX_ProdDB;integrated security=False;user id=sa;password=S@tyam79;connect timeout=120;encrypt=False;trustservercertificate=True;applicationintent=ReadWrite;multisubnetfailover=False;MultipleActiveResultSets=True;App=EntityFramework&quot;" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Demos\\SQLServer\ 2016\\OLTPM\\SQL\ Server\ 2016\ In-Memory\ Performance\ Demo\\ElusionX\\ElusionX\\ElusionX\.Web\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='ElusionX_ProdDBEntities']/@connectionString" />
+  </parameter>
+  <parameter name="oadbconnection-Web.config Connection String" description="" value="Data Source=.;Database=ElusionX_OADB;Integrated Security=False;User ID=sa;Password=S@tyam79;Connect Timeout=120;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Demos\\SQLServer\ 2016\\OLTPM\\SQL\ Server\ 2016\ In-Memory\ Performance\ Demo\\ElusionX\\ElusionX\\ElusionX\.Web\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='oadbconnection']/@connectionString" />
+  </parameter>
+  <parameter name="oadbconnection_oltp-Web.config Connection String" description="" value="Data Source=.;Database=ElusionX_OADB;Integrated Security=False;User ID=OLTPUser;Password=Passw0rd1;Connect Timeout=120;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Demos\\SQLServer\ 2016\\OLTPM\\SQL\ Server\ 2016\ In-Memory\ Performance\ Demo\\ElusionX\\ElusionX\\ElusionX\.Web\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='oadbconnection_oltp']/@connectionString" />
+  </parameter>
+  <parameter name="oadbconnection_rtoa-Web.config Connection String" description="" value="Data Source=.;Database=ElusionX_OADB;Integrated Security=False;User ID=RTOAUser;Password=Passw0rd1;Connect Timeout=120;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Demos\\SQLServer\ 2016\\OLTPM\\SQL\ Server\ 2016\ In-Memory\ Performance\ Demo\\ElusionX\\ElusionX\\ElusionX\.Web\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='oadbconnection_rtoa']/@connectionString" />
+  </parameter>
+  <parameter name="proddbconnection-Web.config Connection String" description="" value="Data Source=.;Database=ElusionX_ProdDB;Integrated Security=False;User ID=sa;Password=S@tyam79;Connect Timeout=120;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Demos\\SQLServer\ 2016\\OLTPM\\SQL\ Server\ 2016\ In-Memory\ Performance\ Demo\\ElusionX\\ElusionX\\ElusionX\.Web\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='proddbconnection']/@connectionString" />
+  </parameter>
+</parameters>

@@ -1,0 +1,2 @@
+"C:\Program Files\Microsoft Corporation\RMLUtils\ostress" -i"C:\Demos\Azure\AzureSQLDB\AdventureWorksWorkload-GenerateIssues.sql" -S"pankajtsp.database.secure.windows.net" -dAdventureworks2014 -Upankaj79 -PP@ssw0rd -t10 -o"ReadWorkload-Basic" -q -n1 -r50 -o"C:\Demos\AzureSQLDb\BadSchema"
+pause

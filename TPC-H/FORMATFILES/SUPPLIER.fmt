@@ -1,0 +1,9 @@
+14.0
+7
+1       SQLCHAR             0       12      "|"        1     S_SUPPKEY                  ""
+2       SQLCHAR             0       25      "|"        2     S_NAME                     SQL_Latin1_General_CP1_CI_AS
+3       SQLCHAR             0       40      "|"        3     S_ADDRESS                  SQL_Latin1_General_CP1_CI_AS
+4       SQLCHAR             0       12      "|"        4     S_NATIONKEY                ""
+5       SQLCHAR             0       15      "|"        5     S_PHONE                    SQL_Latin1_General_CP1_CI_AS
+6       SQLCHAR             0       41      "|"        6     S_ACCTBAL                  ""
+7       SQLCHAR             0       101     "|\r\n"    7     S_COMMENT                  SQL_Latin1_General_CP1_CI_AS

@@ -1,0 +1,10 @@
+C:\Demos\SQLServer 2016\Hybrid Cloud Capabilities\In-Memory Enhancements\Operational Analytics\order-insert\MultithreadedOrderInsert\bin\Debug\MultithreadedOrderInsert.exe.config
+C:\Demos\SQLServer 2016\Hybrid Cloud Capabilities\In-Memory Enhancements\Operational Analytics\order-insert\MultithreadedOrderInsert\bin\Debug\MultithreadedOrderInsert.exe
+C:\Demos\SQLServer 2016\Hybrid Cloud Capabilities\In-Memory Enhancements\Operational Analytics\order-insert\MultithreadedOrderInsert\bin\Debug\MultithreadedOrderInsert.pdb
+C:\Demos\SQLServer 2016\Hybrid Cloud Capabilities\In-Memory Enhancements\Operational Analytics\order-insert\MultithreadedOrderInsert\obj\Debug\MultithreadedOrderInsert.csprojResolveAssemblyReference.cache
+C:\Demos\SQLServer 2016\Hybrid Cloud Capabilities\In-Memory Enhancements\Operational Analytics\order-insert\MultithreadedOrderInsert\obj\Debug\MultithreadedInMemoryTableInsert.ErrorDetailsForm.resources
+C:\Demos\SQLServer 2016\Hybrid Cloud Capabilities\In-Memory Enhancements\Operational Analytics\order-insert\MultithreadedOrderInsert\obj\Debug\MultithreadedInMemoryTableInsert.MultithreadedOrderInsertMain.resources
+C:\Demos\SQLServer 2016\Hybrid Cloud Capabilities\In-Memory Enhancements\Operational Analytics\order-insert\MultithreadedOrderInsert\obj\Debug\MultithreadedOrderInsert.Properties.Resources.resources
+C:\Demos\SQLServer 2016\Hybrid Cloud Capabilities\In-Memory Enhancements\Operational Analytics\order-insert\MultithreadedOrderInsert\obj\Debug\MultithreadedOrderInsert.csproj.GenerateResource.Cache
+C:\Demos\SQLServer 2016\Hybrid Cloud Capabilities\In-Memory Enhancements\Operational Analytics\order-insert\MultithreadedOrderInsert\obj\Debug\MultithreadedOrderInsert.exe
+C:\Demos\SQLServer 2016\Hybrid Cloud Capabilities\In-Memory Enhancements\Operational Analytics\order-insert\MultithreadedOrderInsert\obj\Debug\MultithreadedOrderInsert.pdb

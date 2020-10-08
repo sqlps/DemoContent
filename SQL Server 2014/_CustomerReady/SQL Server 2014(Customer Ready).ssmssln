@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# SQL Server Management Studio Solution File, Format Version 12.00
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "AlwaysON AG", "AlwaysON AG\AlwaysON AG.ssmssqlproj", "{B8D87F06-20DD-4EDD-838F-B103E33E5ECE}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "Backup to Azure", "Backup\Backup to Azure.ssmssqlproj", "{8CDB14CC-F69B-4CB5-9449-29629DDC7CA3}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "Buffer Pool Extension", "Buffer Pool Extension\Buffer Pool Extension.ssmssqlproj", "{DB7F7A46-7784-460C-9EF8-C139746E23DB}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "DBA OverView", "IMOLTP DBA OverView\DBA OverView.ssmssqlproj", "{11C14322-23E0-4786-9A50-1407871F0193}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "In-Memory CSI", "In-Memory CSI\In-Memory CSI.ssmssqlproj", "{41506BE8-7B2D-4C15-AE86-E0E5F4A81672}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "New CE Changes", "New CE Changes\New CE Changes.ssmssqlproj", "{7B8E725C-C7FE-45C9-9014-A9ABF738B2E7}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "Separation of duties", "Separation of duties\Separation of duties.ssmssqlproj", "{781B41A4-712E-4FB2-B334-F0BF7F22AE09}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "Wait Priority", "Online Operations\Wait Priority.ssmssqlproj", "{181BA834-C9F6-416B-9EAF-9877C04AE706}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Default|Default = Default|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B8D87F06-20DD-4EDD-838F-B103E33E5ECE}.Default|Default.ActiveCfg = Default
+		{C43D1B6A-4132-47D2-902E-E631EA7B32E6}.Default|Default.ActiveCfg = Default
+		{8CDB14CC-F69B-4CB5-9449-29629DDC7CA3}.Default|Default.ActiveCfg = Default
+		{DB7F7A46-7784-460C-9EF8-C139746E23DB}.Default|Default.ActiveCfg = Default
+		{11C14322-23E0-4786-9A50-1407871F0193}.Default|Default.ActiveCfg = Default
+		{41506BE8-7B2D-4C15-AE86-E0E5F4A81672}.Default|Default.ActiveCfg = Default
+		{7B8E725C-C7FE-45C9-9014-A9ABF738B2E7}.Default|Default.ActiveCfg = Default
+		{781B41A4-712E-4FB2-B334-F0BF7F22AE09}.Default|Default.ActiveCfg = Default
+		{181BA834-C9F6-416B-9EAF-9877C04AE706}.Default|Default.ActiveCfg = Default
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
